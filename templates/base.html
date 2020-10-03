@@ -51,8 +51,7 @@
         <!-- Plugins js -->
         <script src="{% static 'js/plugins.js' %}"></script>
 
-        <!-- Active js -->
-        <script src="js/active.js"></script>
+
 
         <!-- Stripe js -->
         <script src="https://js.stripe.com/v3/"></script>
@@ -60,7 +59,7 @@
     {% endblock %}
 
     <!-- Title  -->
-    <title>Vintage</title>
+    <title>Vintage {% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
@@ -88,6 +87,17 @@
 <!-- ##### Main Content Wrapper Start ##### -->
 <div class="main-content-wrapper d-flex clearfix">
 
+    {% if messages %}
+
+        <div class="message-container">
+
+
+
+        </div>
+
+        {% endif %}
+
+</div>
     <!-- Mobile Nav (max width 767px)-->
     <div class="mobile-nav">
         <!-- Navbar Brand -->
@@ -141,130 +151,10 @@
     </header>
     <!-- Header Area End -->
 
-    <!-- Product Catagories Area Start -->
-    <div class="products-catagories-area clearfix">
-        <div class="amado-pro-catagory clearfix">
+{% block content %}
 
-            <!-- Single Catagory -->
-            <div class="single-products-catagory clearfix">
-                <a href="shop.html">
-                    <img src="img/bg-img/1.jpg" alt="">
-                    <!-- Hover Content -->
-                    <div class="hover-content">
-                        <div class="line"></div>
-                        <p>From $180</p>
-                        <h4>Modern Chair</h4>
-                    </div>
-                </a>
-            </div>
+        {% endblock %}
 
-            <!-- Single Catagory -->
-            <div class="single-products-catagory clearfix">
-                <a href="shop.html">
-                    <img src="img/bg-img/2.jpg" alt="">
-                    <!-- Hover Content -->
-                    <div class="hover-content">
-                        <div class="line"></div>
-                        <p>From $180</p>
-                        <h4>Minimalistic Plant Pot</h4>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Single Catagory -->
-            <div class="single-products-catagory clearfix">
-                <a href="shop.html">
-                    <img src="img/bg-img/3.jpg" alt="">
-                    <!-- Hover Content -->
-                    <div class="hover-content">
-                        <div class="line"></div>
-                        <p>From $180</p>
-                        <h4>Modern Chair</h4>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Single Catagory -->
-            <div class="single-products-catagory clearfix">
-                <a href="shop.html">
-                    <img src="img/bg-img/4.jpg" alt="">
-                    <!-- Hover Content -->
-                    <div class="hover-content">
-                        <div class="line"></div>
-                        <p>From $180</p>
-                        <h4>Night Stand</h4>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Single Catagory -->
-            <div class="single-products-catagory clearfix">
-                <a href="shop.html">
-                    <img src="img/bg-img/5.jpg" alt="">
-                    <!-- Hover Content -->
-                    <div class="hover-content">
-                        <div class="line"></div>
-                        <p>From $18</p>
-                        <h4>Plant Pot</h4>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Single Catagory -->
-            <div class="single-products-catagory clearfix">
-                <a href="shop.html">
-                    <img src="img/bg-img/6.jpg" alt="">
-                    <!-- Hover Content -->
-                    <div class="hover-content">
-                        <div class="line"></div>
-                        <p>From $320</p>
-                        <h4>Small Table</h4>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Single Catagory -->
-            <div class="single-products-catagory clearfix">
-                <a href="shop.html">
-                    <img src="img/bg-img/7.jpg" alt="">
-                    <!-- Hover Content -->
-                    <div class="hover-content">
-                        <div class="line"></div>
-                        <p>From $318</p>
-                        <h4>Metallic Chair</h4>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Single Catagory -->
-            <div class="single-products-catagory clearfix">
-                <a href="shop.html">
-                    <img src="img/bg-img/8.jpg" alt="">
-                    <!-- Hover Content -->
-                    <div class="hover-content">
-                        <div class="line"></div>
-                        <p>From $318</p>
-                        <h4>Modern Rocking Chair</h4>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Single Catagory -->
-            <div class="single-products-catagory clearfix">
-                <a href="shop.html">
-                    <img src="img/bg-img/9.jpg" alt="">
-                    <!-- Hover Content -->
-                    <div class="hover-content">
-                        <div class="line"></div>
-                        <p>From $318</p>
-                        <h4>Home Deco</h4>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Product Catagories Area End -->
-</div>
 <!-- ##### Main Content Wrapper End ##### -->
 
 <!-- ##### Newsletter Area Start ##### -->
@@ -274,9 +164,9 @@
             <!-- Newsletter Text -->
             <div class="col-12 col-lg-6 col-xl-7">
                 <div class="newsletter-text mb-100">
-                    <h2>Subscribe for a <span>25% Discount</span></h2>
-                    <p>Nulla ac convallis lorem, eget euismod nisl. Donec in libero sit amet mi vulputate consectetur.
-                        Donec auctor interdum purus, ac finibus massa bibendum nec.</p>
+                    <h2>Subscribe to never miss a <span>New ARRIVAL</span></h2>
+                    <p>Subscribe to Vintage for the latest arrivals and exciting news,
+                    straight to your inbox!</p>
                 </div>
             </div>
             <!-- Newsletter Form -->
@@ -351,6 +241,14 @@
     </div>
 </footer>
 <!-- ##### Footer Area End ##### -->
+
+{% block postloadjs %}
+
+    <!-- Active js -->
+    <script src="{% static 'js/active.js' %}"></script>
+
+
+    {% endblock %}
 
 </body>
 
