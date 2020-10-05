@@ -1,0 +1,23 @@
+/* ------------------------------- custom CSS */
+
+/* ------------------------------- index page */
+.main-logo {
+    top: 5vh;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-logo p{
+    color: #000000;
+}
+
+.home-page {
+    min-height: 90vh;
+    position: relative;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-image: url('/static/images/core_img/bg-2.png');
+}

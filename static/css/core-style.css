@@ -701,10 +701,17 @@ img {
               border: none;
               -moz-appearance: textfield;
               -webkit-appearance: textfield;
-              appearance: textfield;
               color: #242424;
               font-size: 14px; }
-              @media only screen and (min-width: 768px) and (max-width: 991px) {
+
+.main-content-wrapper .cart-table-area table tbody tr td .qty-btn .quantity input {
+}
+
+.main-content-wrapper .cart-table-area table tbody tr td .qty-btn .quantity input {
+  appearance: textfield;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
                 .main-content-wrapper .cart-table-area table tbody tr td .qty-btn .quantity input {
                   width: 45px; } }
             .main-content-wrapper .cart-table-area table tbody tr td .qty-btn .quantity .qty-plus {

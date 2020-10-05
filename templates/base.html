@@ -16,7 +16,7 @@
     {% endblock %}
 
     <!-- Favicon  -->
-    <link rel="icon" href="{% static 'images/core_img/_____.ico' %}">
+    <link rel="icon" href="{% static 'images/core_img/favicon.ico' %}">
 
     {% block corecss %}
 
@@ -117,7 +117,7 @@
             </div>
             <!-- Logo -->
             <div class="logo">
-                <a href=""><img src="{% static 'images/core_img/logo.png' %}" alt="Navbar Logo"></a>
+                <a href=""><img src="{% static 'images/core_img/logo_transparent_background.png' %}" alt="Navbar Logo"></a>
             </div>
             <!-- Amado Nav -->
             <nav class="amado-nav">
@@ -127,13 +127,13 @@
 
                     <li class="active"><a href="">Home</a></li>
 
-                    <li class="active"><a
+                    <li class=""><a
                             href="">About Us</a></li>
 
-                    <li class="active"><a
+                    <li class=""><a
                             href="">Shopping</a></li>
 
-                    <li class=" active "><a
+                    <li class=""><a
                             href="">Cart</a></li>
 
                     {% endwith %}
@@ -154,13 +154,13 @@
 
                     <a href="" class="btn amado-btn mb-15">My Profile</a>
 
-                    <a href="" class="btn amado-btn profile-button">Logout</a>
+                    <a href="{% url 'account_logout' %}" class="btn amado-btn profile-button">Logout</a>
 
                     {% else %}
 
-                    <a href="" class="btn amado-btn mb-15">Register</a>
+                    <a href="{% url 'account_signup' %}" class="btn amado-btn mb-15">Register</a>
 
-                    <a href="" class="btn amado-btn active">Login</a>
+                    <a href="{% url 'account_login' %}" class="btn amado-btn active">Login</a>
 
                     {% endif %}
 
@@ -219,7 +219,7 @@
                 <!-- Newsletter Text -->
                 <div class="col-12 col-lg-6 col-xl-7">
                     <div class="newsletter-text mb-100">
-                        <h2>Subscribe for the <span>Newest Srrivals!</span></h2>
+                        <h2>Subscribe for the <span>Newest Arrivals!</span></h2>
 
                         <p>Insert your email here and subscribe to Vintage for the latest additions
                             and news!</p>
@@ -252,7 +252,7 @@
                     <div class="single_widget_area">
                         <!-- Logo -->
                         <div class="footer-logo mr-50">
-                            <a href=""><img src="{% static 'images/core_img/logo2.png' %}" alt=""></a>
+                            <a href=""><img src="{% static 'images/core_img/logo_footer.png' %}" alt=""></a>
                         </div>
 
                         <!-- Copywrite Text -->
@@ -315,21 +315,6 @@
 
     <!-- Active js -->
     <script src="{% static 'js/active.js' %}"></script>
-
-    <!-- Toast js -->
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
-
-    <!-- Js for EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("user_sidwnvCWhgSDRphSQk7JI");
-        })();
-    </script>
-    <script src="{% static 'js/sendEmail.js' %}"></script>
 
     <!-- Javascript for Sweet Alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
