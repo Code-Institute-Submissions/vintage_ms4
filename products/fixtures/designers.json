@@ -1,43 +1,43 @@
 [
   {
     "pk": 1,
-    "Model": "products.designer",
-    "field": {
+    "model": "products.designer",
+    "fields": {
       "name": "Gucci"
     }
   },
   {
     "pk": 2,
-    "Model": "products.designer",
-    "field": {
+    "model": "products.designer",
+    "fields": {
       "name": "Chanel"
     }
   },
   {
     "pk": 3,
-    "Model": "products.designer",
-    "field": {
+    "model": "products.designer",
+    "fields": {
       "name": "Prada"
     }
   },
   {
     "pk": 4,
-    "Model": "products.designer",
-    "field": {
+    "model": "products.designer",
+    "fields": {
       "name": "Louis Vuitton"
     }
   },
   {
     "pk": 5,
-    "Model": "products.designer",
-    "field": {
+    "model": "products.designer",
+    "fields": {
       "name": "Fendi"
     }
   },
    {
     "pk": 6,
-    "Model": "products.designer",
-    "field": {
+    "model": "products.designer",
+    "fields": {
       "name": "Dior"
     }
   }
