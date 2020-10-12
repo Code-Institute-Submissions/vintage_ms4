@@ -3,7 +3,7 @@
    "pk": 1,
    "model": "products.product",
    "fields": {
-      "sku": 100,
+      "sku": 101,
       "designer": "Chanel",
       "name": "Chanel White Caviar Skin Timeless Bag",
       "description": "The Caviar Petite Shopping Tote bag features a caviar leather body; a back exterior slip pocket; curb chain handles; an open top with a magnetic snap button closure and interior zip and slip pockets. The bag has signs of use. The exterior has some signs of wear and interior has make up stains.",
@@ -19,7 +19,7 @@
    "pk": 2,
    "model": "products.product",
    "fields": {
-      "sku": 200,
+      "sku": 102,
       "designer": "Fendi",
       "name": "Fendi Zucca Vanity Bag",
       "description": "Fendi Zucca Vanity case bag in good condition. Size: H6in x W11in x D6in. Handle length 8 inches.",
@@ -35,7 +35,7 @@
    "pk": 3,
    "model": "products.product",
    "fields": {
-      "sku": 300,
+      "sku": 103,
       "designer": "Dior",
       "name": "Christian Dior Trotter Boston Bag",
       "description": "Shop this amazing Christian Dior Trotter Boston bag. This bag is vintage but has a futuristic feel to it with the classic Dior monogram throughout. Top handles and an inside zip pocket. Very Good Condition. Some light fading on the handles and some marks inside. Comes with the original dustbag.",
@@ -51,7 +51,7 @@
    "pk": 4,
    "model": "products.product",
    "fields": {
-      "sku": 400,
+      "sku": 104,
       "designer": "Prada",
       "name": "Prada Satin Pouch",
       "description": "Shop this beautiful satin prada pouch - this is so rare and a classic. The satin can be dressed up or down. Satin vintage bags especially from Prada are so hard to get hold of. This bag has a clasp closure and inside features a pocket with a Prada compact mirror.  Very Good Condition. The only flaw is the Slight wear to the satin near the closure. ",
@@ -67,7 +67,7 @@
    "pk": 5,
    "model": "products.product",
    "fields": {
-      "sku": 500,
+      "sku": 105,
       "designer": "Louis Vuitton",
       "name": "Louis Vuitton Mini Pochette",
       "description": "Shop this Louis Vuitton Accessories Pochette in the mini size. This bag is sold out in Louis Vuitton stores and is also discontinued. The bag features the classic monogram leather with a chain strap. This design is very sought after and a serious investment piece. The value of the discontinued pochettes is going up and up and is the perfect vintage bag. New condition with the original box dustbag and gift receipt.",
@@ -83,7 +83,7 @@
    "pk": 6,
    "model": "products.product",
    "fields": {
-      "sku": 600,
+      "sku": 106,
       "designer": "Louis Vuitton",
       "name": "Louis Vuitton Graffiti Pochette",
       "description": "Shop this rare Louis Vuitton Graffiti Pochette. Limited edition collaboration between Stephen Sprouse and Louis Vuitton recreate the iconic pochette; featuring his 'Monogram Graffiti' print on the classic Monogram Canvas; accented with gold-tone metal hardware. This petite shoulder bag features a detachable leather shoulder strap.",
@@ -99,7 +99,7 @@
    "pk": 7,
    "model": "products.product",
    "fields": {
-      "sku": 700,
+      "sku": 107,
       "designer": "Chanel",
       "name": "Chanel Rhinestone Sunglasses",
       "description": "Black frame; dark blue lens. Crystals on each arm (1 missing). Good condition.",
@@ -115,7 +115,7 @@
    "pk": 8,
    "model": "products.product",
    "fields": {
-      "sku": 800,
+      "sku": 108,
       "designer": "Chanel",
       "name": "Chanel Rhinestone Sunglasses",
       "description": "Rhinestone tortoise shell sunglasses. Two stones missing - one from each side but not noticeable. Good condition and they come with case.",
@@ -131,7 +131,7 @@
    "pk": 9,
    "model": "products.product",
    "fields": {
-      "sku": 900,
+      "sku": 109,
       "designer": "Chanel",
       "name": "Chanel Tortoise Sunglasses",
       "description": "Amazing condition with diamanté CC detail.",
@@ -147,7 +147,7 @@
    "pk": 10,
    "model": "products.product",
    "fields": {
-      "sku": 1000,
+      "sku": 110,
       "designer": "Dior",
       "name": "Dior Oversized Sunglasses",
       "description": "Vintage Dior Oversized Sunglasses - like new. Come with case.",
@@ -163,7 +163,7 @@
    "pk": 11,
    "model": "products.product",
    "fields": {
-      "sku": 2000,
+      "sku": 111,
       "designer": "Dior",
       "name": "Dior Shield Sunglasses",
       "description": "Purple lens. They are in very good condition and come with the case. As seen on Kylie Jenner",
@@ -179,7 +179,7 @@
    "pk": 12,
    "model": "products.product",
    "fields": {
-      "sku": 3000,
+      "sku": 112,
       "designer": "Gucci",
       "name": "Gucci Red Sunglasses",
       "description": "Red lens. They are in very good condition and come with the case.",
@@ -195,7 +195,7 @@
    "pk": 13,
    "model": "products.product",
    "fields": {
-      "sku": 4000,
+      "sku": 113,
       "designer": "Gucci",
       "name": "Gucci Tortoise Sunglasses",
       "description": "Gucci tortoise vintage sunglasses in very good condition. G details each side of the arm.",
@@ -211,7 +211,7 @@
    "pk": 14,
    "model": "products.product",
    "fields": {
-      "sku": 5000,
+      "sku": 114,
       "designer": "Louis Vuitton",
       "name": "Louis Vuitton Papillon",
       "description": "A scaled-down version of the fashion house's iconic Papillon bag, the brown LV monogram coated canvas stays true to size. ... Piped with caramel cross-grain leather, a matching thin, narrow handle securely clips onto the bag at one side and is stitched on at the other.",
@@ -227,7 +227,7 @@
    "pk": 15,
    "model": "products.product",
    "fields": {
-      "sku": 6000,
+      "sku": 115,
       "designer": "Gucci",
       "name": "Gucci Mini Bag",
       "description": "Vintage Mini version of an iconic Gucci bag. In a fantastic condition, comes with dustbag and original box",
