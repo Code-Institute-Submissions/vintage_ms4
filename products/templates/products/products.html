@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- All Products Area Start -->
+<div class="shop_sidebar_area">
+
+    <!-- ##### Single Widget ##### -->
+    <div class="widget catagory mb-50">
+        <!-- Categories -->
+        <h6 class="widget-title mb-30">Categories</h6>
+
+        <div class="catagories-menu">
+            <ul>
+                <li><a href="{% url 'products' %}">All Categories</a></li>
+
+
+                {% for category in categories %}
+                <li><a class="{% if category.name == selected %} active {% endif %}" href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a></li>
+                {% endfor %}
+
+
+                {% for category in categories %}
+
+                <li><a href="{% url 'products' %}?category={{ category.name }}">{{ category.firendly_name }}</a></li>
+
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- ##### Single Widget ##### -->
+    <div class="widget brands mb-50">
+        <!-- Periods -->
+        <h6 class="widget-title mb-30">Designers</h6>
+
+        <div class="catagories-menu">
+            <ul>
+                <li><a href="{% url 'products' %}">All Designers</a></li>
+
+                {% for designer in designers %}
+
+                <li><a href="{% url 'products' %}?designer={{ designer.name }}">{{ designer.name }}</a></li>
+
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="amado_product_area section-padding-100">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="product-topbar d-xl-flex align-items-end justify-content-between">
+                    <div class="total-products golden-text">
+                        <p>Shop All </p>
+                    </div>
+
+                    <!-- Sorting -->
+                    <div class="product-sorting d-flex">
+                        <div class="sort-by-date d-flex align-items-center">
+                            <p>Sort by &nbsp;</p>
+
+                            <div class="dropdown d-flex">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item"
+                                        href="{% url 'products' %}?sort=value&direction=asc">Price (Low to
+                                        High)</a>
+
+                                    <a class="dropdown-item"
+                                        href="{% url 'products' %}?sort=value&direction=desc">Price (High to
+                                        Low)</a>
+
+                                    <a class="dropdown-item"
+                                        href="{% url 'products' %}?sort=name&direction=asc">Name (A-Z)
+                                    </a>
+
+                                    <a class="dropdown-item"
+                                        href="{% url 'products' %}?sort=name&direction=desc">Name (Z-A)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            {% for product in products %}
+
+            <!-- Single Antiquity Area -->
+            <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                <div class="single-product-wrapper">
+                    <!-- Antiquity Image -->
+                    <div class="product-img">
+
+                        {% if product.image1 %}
+
+                        <a href="{% url 'single_product' product.id %}">
+                            <img src="{{ product.image1 }}" alt="{{ product.name }}">
+
+                            <!-- Hover Thumb -->
+                            <img class="hover-img" src="{{ product.image1 }}" alt="{{ product.name }}">
+                        </a>
+
+                        {% else %}
+
+                        <img src="{% static 'images/core_img/noimage.png' %}" alt="{{ product.name }}">
+
+                        {% endif %}
+
+                    </div>
+
+                    <!-- Antiquity Description -->
+                    <div class="product-description d-flex align-items-center justify-content-between">
+                        <!-- Antiquity Meta Data -->
+                        <div class="product-meta-data">
+                            <div class="line"></div>
+
+                            <p class="product-price">€{{ product.price }}</p>
+
+                            <a href="{% url 'single_product' product.id %}">
+                                <h6>{{ product.name }}</h6>
+                            </a>
+                        </div>
+                        <!-- Designer & Cart -->
+                        <div class="ratings-cart text-right">
+                            <div class="ratings golden-text">
+                                <p>{{ product.designer }}</p>
+                            </div>
+
+                            <form class="cart" action="" method="POST">
+
+                                {% csrf_token %}
+
+                                <div class="form-group text-right m-0 p-0">
+                                    <input type="hidden" class="form-control qty_input" name="quantity" value="1"
+                                        min="1" max="10" data-item_id="{{ product.id }}"
+                                        id="id_qty_{{ product.id }}">
+                                </div>
+
+                                <button class="add-to-cart-btn add-cursor" type="submit" data-toggle="tooltip"
+                                    data-placement="left" title="Add to Cart"><img
+                                        src="{% static 'images/core_img/cart.png' %}" alt=""></button>
+
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+<!-- All Antiquities Area End -->
+
+{% endblock %}
+
+{% block postloadjs %}
+
+{{ block.super }}
+
+{% endblock %}
