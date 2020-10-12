@@ -1,5 +1,9 @@
 /* ------------------------------- custom CSS */
 
+.add-cursor {
+    cursor: pointer;
+}
+
 /* ------------------------------- index page */
 .main-logo {
     top: 5vh;
@@ -20,4 +24,10 @@
     background-repeat: no-repeat;
     overflow: hidden;
     background-image: url('/static/images/core_img/bg-2.png');
+}
+
+/* ------------------------------- Products Details */
+
+.gold-text {
+    color: #fbb710;
 }

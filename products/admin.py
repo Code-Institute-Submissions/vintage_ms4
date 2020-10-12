@@ -4,6 +4,7 @@ from .models import Product, Category, Designer
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
+        'pk',
         'sku',
         'designer',
         'name',

@@ -99,7 +99,7 @@
 
             {% for product in products %}
 
-            <!-- Single Antiquity Area -->
+        <!-- Single Antiquity Area -->
             <div class="col-12 col-sm-6 col-md-12 col-xl-6">
                 <div class="single-product-wrapper">
                     <!-- Antiquity Image -->
@@ -108,10 +108,10 @@
                         {% if product.image1 %}
 
                         <a href="{% url 'single_product' product.id %}">
-                            <img src="{{ product.image1 }}" alt="{{ product.name }}">
+                            <img src="{{ product.image1.url }}" alt="{{ product.name }}">
 
                             <!-- Hover Thumb -->
-                            <img class="hover-img" src="{{ product.image1 }}" alt="{{ product.name }}">
+                            <img class="hover-img" src="{{ product.image1.url }}" alt="{{ antiquity.name }}">
                         </a>
 
                         {% else %}
@@ -121,6 +121,7 @@
                         {% endif %}
 
                     </div>
+
 
                     <!-- Antiquity Description -->
                     <div class="product-description d-flex align-items-center justify-content-between">
