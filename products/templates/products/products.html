@@ -71,12 +71,10 @@
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                         <a class="dropdown-item"
-                                           href="{% url 'products' %}?sort=value&direction=asc">Price (Low to
-                                            High)</a>
+                                           href="{% url 'products' %}?sort=price&direction=asc">Price (↑)</a>
 
                                         <a class="dropdown-item"
-                                           href="{% url 'products' %}?sort=value&direction=desc">Price (High to
-                                            Low)</a>
+                                           href="{% url 'products' %}?sort=price&direction=desc">Price (↓)</a>
 
                                         <a class="dropdown-item"
                                            href="{% url 'products' %}?sort=name&direction=asc">Name (A-Z)
