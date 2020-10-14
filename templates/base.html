@@ -135,7 +135,10 @@
                             href="{% url 'products' %}">Shopping</a></li>
 
                     <li class=""><a
-                            href="">Cart</a></li>
+                            href="">Newest Arrivals</a></li>
+
+                    <li class=""><a
+                            href="{% url 'view_cart' %}">Cart</a></li>
 
                     {% endwith %}
 
@@ -170,7 +173,7 @@
 
             <!-- Cart Menu -->
             <div class="cart-fav-search mb-100">
-                <a href="" class="cart-nav {% if total == 0  %} golden-text {% endif %}">
+                <a href="{% url 'view_cart' %}" class="cart-nav {% if total == 0  %} gold-text {% endif %}">
                     <img src="{% static 'images/core_img/cart.png' %}" alt="Cart Icon">Cart&nbsp;
 
                     {% if total %}
@@ -299,7 +302,11 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" href="">Cart</a>
+                                            <a class="nav-link" href="">Newest Arrivals</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'view_cart' %}">Cart</a>
                                         </li>
                                     </ul>
                                 </div>

@@ -30,48 +30,58 @@
                         {% if product.image1 %}
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
-                                        style="background-image: url('{{ product.image1.url }}');"
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"
+                                        style="background-image: url('{{ product.image1.url }}');">
                                     </li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="1">
-                                        style="background-image: url('{{ product.image2.url }}');"
+                                     {% if product.image2 %}
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"
+                                        style="background-image: url('{{ product.image2.url }}');">
                                     </li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="2">
-                                        style="background-image: url('{{ product.image3.url }}');"
+                                         {% endif %}
+                                 {% if product.image3 %}
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"
+                                        style="background-image: url('{{ product.image3.url }}');">
                                     </li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="2">
-                                        style="background-image: url('{{ product.image4.url }}');"
+                                     {% endif %}
+                                 {% if product.image4 %}
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"
+                                        style="background-image: url('{{ product.image4.url }}');">
                                     </li>
+                                     {% endif %}
                                 </ol>
                                 <div class="carousel-inner">
                                     {% if product.image1 %}
-                                    <div class="carousel-item active">
-                                        <a class="gallery_img" href="{{ product.image1.url }}">
-                                            <img class="d-block w-100" src="{{ product.image1.url }}" alt="First slide">
-                                        </a>
-                                    </div>
+                                        <div class="carousel-item active">
+                                            <a class="gallery_img" href="{{ product.image1.url }}">
+                                                <img class="d-block w-100" src="{{ product.image1.url }}"
+                                                     alt="First slide">
+                                            </a>
+                                        </div>
                                     {% endif %}
                                     {% if product.image2 %}
-                                    <div class="carousel-item">
-                                        <a class="gallery_img" href="{{ product.image2.url }}">
-                                            <img class="d-block w-100" src="{{ product.image2.url }}" alt="First slide">
-                                        </a>
-                                    </div>
-                                        {% endif %}
-                                {% if product.image3 %}
-                                    <div class="carousel-item">
-                                        <a class="gallery_img" href="{{ product.image3.url }}">
-                                            <img class="d-block w-100" src="{{ product.image3.url }}" alt="First slide">
-                                        </a>
-                                    </div>
+                                        <div class="carousel-item">
+                                            <a class="gallery_img" href="{{ product.image2.url }}">
+                                                <img class="d-block w-100" src="{{ product.image2.url }}"
+                                                     alt="First slide">
+                                            </a>
+                                        </div>
+                                    {% endif %}
+                                    {% if product.image3 %}
+                                        <div class="carousel-item">
+                                            <a class="gallery_img" href="{{ product.image3.url }}">
+                                                <img class="d-block w-100" src="{{ product.image3.url }}"
+                                                     alt="First slide">
+                                            </a>
+                                        </div>
                                     {% endif %}
                                     {% if product.image4 %}
-                                    <div class="carousel-item">
-                                        <a class="gallery_img" href="{{ product.image4.url }}">
-                                            <img class="d-block w-100" src="{{ product.image4.url }}" alt="First slide">
-                                        </a>
-                                    </div>
-                                        {% endif %}
+                                        <div class="carousel-item">
+                                            <a class="gallery_img" href="{{ product.image4.url }}">
+                                                <img class="d-block w-100" src="{{ product.image4.url }}"
+                                                     alt="First slide">
+                                            </a>
+                                        </div>
+                                    {% endif %}
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
                                    data-slide="prev">
@@ -137,23 +147,34 @@
                         </div>
 
                         <!-- Add to Cart Form -->
-                        <form class="cart clearfix" action="" method="POST">
+                        <form class="cart clearfix" action="{% url 'add_to_cart' product.id %}" method="POST">
 
                             {% csrf_token %}
 
-                            <div class="form-row">
+                            <div class="cart-btn d-flex mb-50">
+                                <p>Qty</p>
 
-                                <div class="col-12">
-                                    <input type="submit" class="btn amado-btn" value="Add to Cart">
+
+                                <div class="quantity form-group">
+                                    <div class="input-group">
+                                        <input type="number" class="form-control qty_input" name="quantity" value="1"
+                                               min="1" max="1" data-item_id="{{ product.id }}"
+                                               id="id_qty_{{ product.id }}" required>
+                                    </div>
                                 </div>
-                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
-                        </form>
 
-                    </div>
+                            <div class="col-12">
+                                <input type="submit" class="btn amado-btn" value="Add to Cart">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+
+                    </form>
+
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- Product Details Area End -->
 
