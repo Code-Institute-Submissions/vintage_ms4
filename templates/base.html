@@ -93,6 +93,31 @@
         <div class="message-container">
 
 
+            {% for message in messages %}
+
+            {% with message.level as level %}
+
+            {% if level == 40 %}
+
+            {% include 'includes/toasts/toast_error.html' %}
+
+            {% elif level == 30 %}
+
+            {% include 'includes/toasts/toast_warning.html' %}
+
+            {% elif level == 25 %}
+
+            {% include 'includes/toasts/toast_success.html' %}
+
+            {% else %}
+
+            {% include 'includes/toasts/toast_info.html' %}
+
+            {% endif %}
+
+            {% endwith %}
+
+            {% endfor %}
 
         </div>
 
@@ -326,6 +351,11 @@
 
     <!-- Javascript for Sweet Alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <!-- Toast js -->
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
 
     {% endblock %}
 
