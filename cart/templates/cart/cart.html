@@ -8,14 +8,22 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-lg-8">
-                <div class="cart-title mt-50">
+                <div class="cart-title mt-50 text-center">
                     <h2>Shopping Cart</h2>
                 </div>
 
                 <div class="cart-table clearfix">
                     <table class="table table-responsive text-center">
 
-                        <thead>
+
+
+
+                        <tbody>
+                            <tr>
+
+                                {% if cart_items %}
+
+                                    <thead>
                             <tr>
                                         <th>Image</th>
 
@@ -27,13 +35,8 @@
                                     </tr>
                         </thead>
 
-
-                        <tbody>
-                            <tr>
-
-                                {% if cart_items %}
-
                                 {% for item in cart_items %}
+
 
 
                                 <!-- Item Image -->
@@ -81,7 +84,10 @@
                                         class="remove-item text-danger bg-transparent border-0 float-center add-cursor bigger-text"
                                         id="remove_{{ item.item_id }}">Remove</button>
                                 </td>
+
                             </tr>
+
+
 
                             {% endfor %}
 
@@ -97,14 +103,7 @@
 
                         </tbody>
                     </table>
-                <div class="row">
-                    <div class="col-12 cart-btn mt-50 text-md-center">
 
-
-                                <a href="{% url 'products' %}" class="btn amado-btn active mt-30">Keep Shopping</a>
-                            </div>
-
-                </div>
                 </div>
 
             </div>
@@ -128,7 +127,17 @@
                         <li><h6 class="mt-4"><strong>Grand Total: £ {{ grand_total|floatformat:2 }}</strong></h6></li>
                     </ul>
                     <div class="cart-btn mt-100">
+                        {% if cart_items %}
+
+                        <a href="" class="btn amado-btn w-100 m-1">Checkout</a>
+                        <a href="{% url 'products' %}" class="btn amado-btn active w-100 m-1">Keep Shopping</a>
+
+
+                        {% else %}
                         <a href="" class="btn amado-btn w-100">Checkout</a>
+
+                         {% endif %}
+
                     </div>
                 </div>
             </div>

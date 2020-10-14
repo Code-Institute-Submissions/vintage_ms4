@@ -153,7 +153,7 @@
                                         <p>{{ product.designer }}</p>
                                     </div>
 
-                                    <form class="cart" action="" method="POST">
+                                    <form class="cart" action="{% url 'add_to_cart' product.id %}" method="POST">
 
                                         {% csrf_token %}
 
