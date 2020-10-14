@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="cart-table-area section-padding-100">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <div class="cart-title mt-50">
+                    <h2>Shopping Cart</h2>
+                </div>
+
+                <div class="cart-table clearfix">
+                    <table class="table table-responsive text-center">
+
+                        <thead>
+                            <tr>
+                                        <th>Image</th>
+
+                                <th>Name</th>
+
+                                <th>Quantity</th>
+
+                                <th>Value</th>
+                                    </tr>
+                        </thead>
+
+
+                        <tbody>
+                            <tr>
+
+                                {% if cart_items %}
+
+                                {% for item in cart_items %}
+
+
+                                <!-- Item Image -->
+                                <td class="cart_product_img">
+
+                                    {% if item.product.image1 %}
+
+                                    <a class="gallery_img" href="{{ item.product.image1.url }}"><img
+                                            src="{{ item.product.image1.url }}" alt="{{ item.name }}"></a>
+
+                                    {% else %}
+
+                                    <a class="gallery_img" href="{% static 'images/core_img/noimage.png' %}"><img
+                                            src="{% static 'images/core_img/noimage.png' %}"
+                                            alt="No Image"></a>
+
+                                    {% endif %}
+
+                                </td>
+
+
+                                <!-- Item Name -->
+                                <td class="cart_product_desc">
+                                    <h5>
+                                        <a href="{% url 'single_product' item.product.id %}">{{ item.product.name }}</a>
+                                    </h5>
+                                </td>
+
+                                <!-- Item Quantity -->
+                                <td class="cart_product_desc">
+                                    <form class="update-form" action=""
+                                        method="POST">
+
+                                       <p>1</p>
+
+                                    </form>
+                                </td>
+
+                                <!-- Item Value -->
+                                <td class="price mt-5">
+                                    <span>€{{ item.product.price}}</span><br><br>
+
+                                    <!-- Delete Item Link  -->
+                                    <button type="submit"
+                                        class="remove-item text-danger bg-transparent border-0 float-center add-cursor bigger-text"
+                                        id="remove_{{ item.item_id }}">Remove</button>
+                                </td>
+                            </tr>
+
+                            {% endfor %}
+
+                            {% else %}
+
+                            <div class="cart-btn mt-50 text-md-center">
+                                <p class="lead">Your cart is empty</p>
+
+                                <a href="{% url 'products' %}" class="btn amado-btn mt-30">Go Shopping</a>
+                            </div>
+
+                            {% endif %}
+
+                        </tbody>
+                    </table>
+                <div class="row">
+                    <div class="col-12 cart-btn mt-50 text-md-center">
+
+
+                                <a href="{% url 'products' %}" class="btn amado-btn active mt-30">Keep Shopping</a>
+                            </div>
+
+                </div>
+                </div>
+
+            </div>
+        <div class="col-12 col-lg-4">
+                <div class="cart-summary">
+                    <h5>Cart Summary </h5>
+                    <ul class="summary-table">
+
+                        {% if total %}
+
+                    <li><span>Bag Total: £ {{ total|floatformat:2 }}</span></li>
+
+                    {% else %}
+
+                   <li> <span>€0.00</span></li>
+
+                    {% endif %}
+
+
+                        <li><span>Delivery: £ {{ delivery|floatformat:2 }}</span></li>
+                        <li><h6 class="mt-4"><strong>Grand Total: £ {{ grand_total|floatformat:2 }}</strong></h6></li>
+                    </ul>
+                    <div class="cart-btn mt-100">
+                        <a href="" class="btn amado-btn w-100">Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+
+{{ block.super }}
+
+<script type="text/javascript">
+    // Remove item and reload on click
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/cart/remove/${itemId}/`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken,
+        };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+</script>
+
+{% endblock %}
