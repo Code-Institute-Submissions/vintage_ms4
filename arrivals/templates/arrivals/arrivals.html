@@ -9,18 +9,21 @@
         <div class="products-catagories-area clearfix">
             <div class="amado-pro-catagory clearfix">
 
+                {% for arrival in arrivals %}
+
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
-                    <a href="{% url 'arrivals' %}">
-                        <img src="img/bg-img/1.jpg" alt="">
+                    <a href="{% url 'single_product' arrival.product_id %}">
+                        <img src="{{ arrival.image1.url }}" alt="Image">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>From $180</p>
-                            <h4>Modern Chair</h4>
+                            <p>{{arrival.price}}</p>
+                            <h4> {{arrival.name}}</h4>
                         </div>
                     </a>
                 </div>
+                {% endfor %}
             </div>
         </div>
 

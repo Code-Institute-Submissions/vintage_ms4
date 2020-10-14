@@ -6,7 +6,7 @@
       "product_id": 14,
       "name": "Louis Vuitton Papillon",
       "price": "445",
-      "image": "papillon1.jpeg"
+      "image1": "papillon1.jpeg"
     }
   },
   {
@@ -16,7 +16,7 @@
       "product_id": 15,
       "name": "Gucci Mini Bag",
       "price": "495",
-      "image": "guccimini4.jpeg"
+      "image1": "guccimini4.jpeg"
     }
   },
   {
@@ -26,7 +26,7 @@
       "product_id": 16,
       "name": "Louis Vuitton Mini Pochette",
       "price": "525",
-      "image": "miniwhite1.jpeg"
+      "image1": "miniwhite1.jpeg"
     }
   },
   {
@@ -36,7 +36,7 @@
       "product_id": 17,
       "name": "Prada Nylon Belt Bag",
       "price": "355",
-      "image": "beltbag1.jpeg"
+      "image1": "beltbag1.jpeg"
     }
   },
   {
@@ -46,7 +46,7 @@
       "product_id": 18,
       "name": "Dior Mini Saddle",
       "price": "895",
-      "image": "saddle1.jpeg"
+      "image1": "saddle1.jpeg"
     }
   },
   {
@@ -56,7 +56,7 @@
       "product_id": 19,
       "name": "Fendi Zucchino Clutch",
       "price": "295",
-      "image": "zucchino1.jpeg"
+      "image1": "zucchino1.jpeg"
     }
   },
   {
@@ -66,7 +66,7 @@
       "product_id": 20,
       "name": "Chanel Denim Sunglasses",
       "price": "245",
-      "image": "jeans1.jpeg"
+      "image1": "jeans1.jpeg"
     }
   },
   {
@@ -76,7 +76,7 @@
       "product_id": 21,
       "name": "Prada Tortoise Sunglasses",
       "price": "245",
-      "image": "pradator1.jpeg"
+      "image1": "pradator1.jpeg"
     }
   },
   {
@@ -85,8 +85,8 @@
     "fields": {
       "product_id": 22,
       "name": "Fendi Diamanté Sunglasses",
-      "price": 135,
-      "image": "fendisunnies1.jpeg"
+      "price": "135",
+      "image1": "fendisunnies1.jpeg"
     }
   }
 ]

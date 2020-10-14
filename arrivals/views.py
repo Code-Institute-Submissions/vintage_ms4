@@ -1,12 +1,12 @@
 from django.shortcuts import render
 
-from .models import Arrivals
+from .models import Arrival
 
 
 def new_arrivals(request):
     """ The view which returns latest arrivals """
 
-    arrivals = Arrivals.objects.all()
+    arrivals = Arrival.objects.all()
 
     context = {
         'arrivals': arrivals,

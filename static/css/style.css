@@ -60,3 +60,12 @@ select {
 .toast-capper {
     height: 2px;
 }
+
+
+/* ------------------------------- about us */
+
+.box-p {
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+}

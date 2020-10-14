@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Arrivals(models.Model):
+class Arrival(models.Model):
 
     product_id = models.IntegerField(null=False, blank=False, default=0)
     name = models.CharField(max_length=254)
