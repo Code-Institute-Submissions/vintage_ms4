@@ -1,8 +1,8 @@
 [
- {
-   "pk": 1,
-   "model": "products.product",
-   "fields": {
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
       "sku": 101,
       "designer": "Chanel",
       "name": "Chanel White Caviar Skin Timeless Bag",
@@ -13,12 +13,12 @@
       "image2": "timeless3.jpeg",
       "image3": "timeless5.jpeg",
       "image4": "timeless6.jpeg"
-   }
-},
- {
-   "pk": 2,
-   "model": "products.product",
-   "fields": {
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
       "sku": 102,
       "designer": "Fendi",
       "name": "Fendi Zucca Vanity Bag",
@@ -29,12 +29,12 @@
       "image2": "vanity2.jpeg",
       "image3": "vanity3.jpeg",
       "image4": "vanity4.jpeg"
-   }
-},
- {
-   "pk": 3,
-   "model": "products.product",
-   "fields": {
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
       "sku": 103,
       "designer": "Dior",
       "name": "Christian Dior Trotter Boston Bag",
@@ -45,12 +45,12 @@
       "image2": "silver2.jpeg",
       "image3": "silver4.jpeg",
       "image4": "silver5.jpeg"
-   }
-},
- {
-   "pk": 4,
-   "model": "products.product",
-   "fields": {
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
       "sku": 104,
       "designer": "Prada",
       "name": "Prada Satin Pouch",
@@ -61,12 +61,12 @@
       "image2": "prada3.jpeg",
       "image3": "prada4.jpeg",
       "image4": "prada5.jpeg"
-   }
-},
- {
-   "pk": 5,
-   "model": "products.product",
-   "fields": {
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
       "sku": 105,
       "designer": "Louis Vuitton",
       "name": "Louis Vuitton Mini Pochette",
@@ -77,12 +77,12 @@
       "image2": "pochette2.jpeg",
       "image3": "pochette3.jpeg",
       "image4": "pochette4.jpeg"
-   }
-},
- {
-   "pk": 6,
-   "model": "products.product",
-   "fields": {
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
       "sku": 106,
       "designer": "Louis Vuitton",
       "name": "Louis Vuitton Graffiti Pochette",
@@ -93,12 +93,12 @@
       "image2": "graffiti2.jpeg",
       "image3": "graffiti4.jpeg",
       "image4": "graffiti6.jpeg"
-   }
-},
- {
-   "pk": 7,
-   "model": "products.product",
-   "fields": {
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
       "sku": 107,
       "designer": "Chanel",
       "name": "Chanel Rhinestone Sunglasses",
@@ -109,12 +109,12 @@
       "image2": "sunglasses_channelblue_2.jpeg",
       "image3": "sunglasses_channelblue_3.jpeg",
       "image4": "sunglasses_channelblue_4.jpeg"
-   }
-},
- {
-   "pk": 8,
-   "model": "products.product",
-   "fields": {
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
       "sku": 108,
       "designer": "Chanel",
       "name": "Chanel Rhinestone Sunglasses",
@@ -125,12 +125,12 @@
       "image2": "sunglasses_channelbrown_2.jpeg",
       "image3": "sunglasses_channelbrown_3.jpeg",
       "image4": "sunglasses_channelbrown_4.jpeg"
-   }
-},
- {
-   "pk": 9,
-   "model": "products.product",
-   "fields": {
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
       "sku": 109,
       "designer": "Chanel",
       "name": "Chanel Tortoise Sunglasses",
@@ -141,12 +141,12 @@
       "image2": "sunglasses_channeltor_2.jpeg",
       "image3": "sunglasses_channeltor_3.jpeg",
       "image4": "sunglasses_channeltor_4.jpeg"
-   }
-},
- {
-   "pk": 10,
-   "model": "products.product",
-   "fields": {
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
       "sku": 110,
       "designer": "Dior",
       "name": "Dior Oversized Sunglasses",
@@ -157,12 +157,12 @@
       "image2": "sunglasses_diorbig_2.jpeg",
       "image3": "sunglasses_diorbig_3.jpeg",
       "image4": "sunglasses_diorbig_4.jpeg"
-   }
-},
-   {
-   "pk": 11,
-   "model": "products.product",
-   "fields": {
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
       "sku": 111,
       "designer": "Dior",
       "name": "Dior Shield Sunglasses",
@@ -173,12 +173,12 @@
       "image2": "sunglasses_diorshield_2.jpeg",
       "image3": "sunglasses_diorshield_3.jpeg",
       "image4": "sunglasses_diorshield_4.jpeg"
-   }
-},
-    {
-   "pk": 12,
-   "model": "products.product",
-   "fields": {
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
       "sku": 112,
       "designer": "Gucci",
       "name": "Gucci Red Sunglasses",
@@ -189,12 +189,12 @@
       "image2": "sunglasses_guccired_2.jpeg",
       "image3": "sunglasses_guccired_3.jpeg",
       "image4": "sunglasses_guccired_4.jpeg"
-   }
-},
-     {
-   "pk": 13,
-   "model": "products.product",
-   "fields": {
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
       "sku": 113,
       "designer": "Gucci",
       "name": "Gucci Tortoise Sunglasses",
@@ -204,39 +204,151 @@
       "image1": "sunglasses_guccitor_1.jpeg",
       "image2": "sunglasses_guccitor_2.jpeg",
       "image3": "sunglasses_guccitor_3.jpeg",
-      "image4": "sunglasses_guccitor_4.jpeg"
-   }
-},
+      "image4": "sunglasses_guccitor_1.jpeg"
+    }
+  },
   {
-   "pk": 14,
-   "model": "products.product",
-   "fields": {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
       "sku": 114,
       "designer": "Louis Vuitton",
       "name": "Louis Vuitton Papillon",
       "description": "A scaled-down version of the fashion house's iconic Papillon bag, the brown LV monogram coated canvas stays true to size. ... Piped with caramel cross-grain leather, a matching thin, narrow handle securely clips onto the bag at one side and is stitched on at the other.",
       "category": 1,
-      "price": " 445",
+      "price": "445",
       "image1": "papillon1.jpeg",
       "image2": "papillon2.jpeg",
       "image3": "papillon3.jpeg",
       "image4": "papillon4.jpeg"
-   }
-},
+    }
+  },
   {
-   "pk": 15,
-   "model": "products.product",
-   "fields": {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
       "sku": 115,
       "designer": "Gucci",
       "name": "Gucci Mini Bag",
       "description": "Vintage Mini version of an iconic Gucci bag. In a fantastic condition, comes with dustbag and original box",
       "category": 1,
-      "price": " 495",
+      "price": "495",
       "image1": "guccimini4.jpeg",
       "image2": "guccimini2.jpeg",
       "image3": "guccimini3.jpeg",
       "image4": "guccimini5.jpeg"
-   }
-}
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+      "sku": 116,
+      "designer": "Louis Vuitton",
+      "name": "Louis Vuitton Mini Pochette",
+      "description": "Shop this Louis Vuitton Mini Accessories Pouch. Signature Damier canvas pattern through with gold tone single chain-link top handle. This bag has been discontinued by Louis Vuitton, so is a real investment as the value is increasing.  Comes with dustbag and original box",
+      "category": 1,
+      "price": "525",
+      "image1": "miniwhite1.jpeg",
+      "image2": "miniwhite2.jpeg",
+      "image3": "miniwhite3.jpeg",
+      "image4": "miniwhite4.jpeg"
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+      "sku": 117,
+      "designer": "Prada",
+      "name": "Prada Nylon Belt Bag",
+      "description": "Shop this gorgeous Prada Nylon Belt Bag. Buckle detail with the Prada classic logo to the front. Magnetic closure. ",
+      "category": 1,
+      "price": "355",
+      "image1": "beltbag1.jpeg",
+      "image2": "beltbag2.jpeg",
+      "image3": "beltbag3.jpeg",
+      "image4": "beltbag4.jpeg"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.product",
+    "fields": {
+      "sku": 118,
+      "designer": "Dior",
+      "name": "Dior Mini Saddle",
+      "description": "Shop this amazing mini saddle evening bag from Dior. Chain handle detail featuring the CD logo. Clasp Closure. Crafted from satin, it features the classic D to the front.\n\nthis bag is such a rare design, and a classic vintage beauty. A true investment piece, to start or add to your vintage collection.",
+      "category": 1,
+      "price": "895",
+      "image1": "saddle1.jpeg",
+      "image2": "saddle2.jpeg",
+      "image3": "saddle3.jpeg",
+      "image4": "saddle4.jpeg"
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.product",
+    "fields": {
+      "sku": 119,
+      "designer": "Fendi",
+      "name": "Fendi Zucchino Clutch",
+      "description": "Shop this Fendi Zucchino clutch bag, it features the classic FF monogram, with a zip closure.",
+      "category": 1,
+      "price": "245",
+      "image1": "zucchino1.jpeg",
+      "image2": "zucchino2.jpeg",
+      "image3": "zucchino3.jpeg",
+      "image4": "zucchino4.jpeg"
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.product",
+    "fields": {
+      "sku": 120,
+      "designer": "Chanel",
+      "name": "Chanel Denim Sunglasses",
+      "description": "Chanel aviator style sunglassesDenim effect on the frame light blue tinted lensgreat condition come with Chanel box.",
+      "category": 1,
+      "price": "245",
+      "image1": "jeans1.jpeg",
+      "image2": "jeans2.jpeg",
+      "image3": "jeans3.jpeg",
+      "image4": "jeans4.jpeg"
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.product",
+    "fields": {
+      "sku": 121,
+      "designer": "Prada",
+      "name": "Prada Tortoise Sunglasses",
+      "description": "Chanel aviator style sunglassesDenim effect on the frame light blue tinted lensgreat condition come with Chanel box.",
+      "category": 1,
+      "price": "245",
+      "image1": "pradator1.jpeg",
+      "image2": "pradator2.jpeg",
+      "image3": "pradator3.jpeg",
+      "image4": "pradator4.jpeg"
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.product",
+    "fields": {
+      "sku": 122,
+      "designer": "Fendi",
+      "name": "Fendi Diamanté Sunglasses",
+      "description": "Fendi diamanté Sunglasses In Deep Red, perfect Condition, all crystals in tact",
+      "category": 2,
+      "price": "135",
+      "image1": "fendisunnies1.jpeg",
+      "image2": "fendisunnies2.jpeg",
+      "image3": "fendisunnies3.jpeg",
+      "image4": "fendisunnies4.jpeg"
+    }
+  }
 ]
