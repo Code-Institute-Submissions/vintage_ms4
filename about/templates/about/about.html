@@ -4,45 +4,44 @@
 
 {% block content %}
 
-<!-- Main Landing Page Section -->
-<div class="products-catagories-area clearfix home-page">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-7 main-logo">
-                <a href="" class="mb-4"><img src="{% static 'images/core_img/main_logo.png' %}"
-                        alt="Main Logo"></a>
+    <!-- Main Landing Page Section -->
+    <div class="products-catagories-area clearfix home-page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-7 main-logo">
+                    <a href="" class="mb-4"><img src="{% static 'images/core_img/main_logo.png' %}"
+                                                 alt="Main Logo"></a>
 
 
+                    <p class="mt-2 mb-4">
+                        a passion for vintage ~
 
-                <p class="mt-2 mb-4">
-                    a passion for vintage ~
+                        Here at Vintage we source and sell pre-loved vintage items.
 
-Here at Vintage we source and sell pre-loved vintage items.
+                        We are based in the UK and sell our vintage pieces around the world.
 
-We are based in the UK and sell our vintage pieces around the world.
+                        Each piece is carefully selected and authenticated, purchased from verified suppliers.
 
-Each piece is carefully selected and authenticated, purchased from verified suppliers.
+                        High-quality vintage items are yours to live in and love whilst increasing in value each year.
 
-High-quality vintage items are yours to live in and love whilst increasing in value each year.
+                        It is never too soon to start collecting, as an investment in your wardrobe - and in yourself.
 
-It is never too soon to start collecting, as an investment in your wardrobe - and in yourself.
+                        By purchasing vintage, you can be confident that you’re making a positively conscious shopping
+                        choice.
 
-By purchasing vintage, you can be confident that you’re making a positively conscious shopping choice.
-
-With love, A ox
-                </p>
+                        With love, A ox
+                    </p>
 
 
+                </div>
+                <div class="col-7 main-logo">
+                    <a href="{% url 'products' %}" class="btn amado-btn mb-15">Shop Here</a>
+
+                </div>
 
             </div>
-            <div class="col-7 main-logo">
-                <a href="{% url 'products' %}" class="btn amado-btn mb-15">Shop Now</a>
-
-            </div>
-
         </div>
     </div>
-</div>
-<!-- Main Landing Page Section End -->
+    <!-- Main Landing Page Section End -->
 
 {% endblock %}
