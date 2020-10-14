@@ -1,0 +1,92 @@
+[
+  {
+    "pk": 1,
+    "model": "arrivals.arrival",
+    "fields": {
+      "product_id": 14,
+      "name": "Louis Vuitton Papillon",
+      "price": "445",
+      "image": "papillon1.jpeg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "arrivals.arrival",
+    "fields": {
+      "product_id": 15,
+      "name": "Gucci Mini Bag",
+      "price": "495",
+      "image": "guccimini4.jpeg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "arrivals.arrival",
+    "fields": {
+      "product_id": 16,
+      "name": "Louis Vuitton Mini Pochette",
+      "price": "525",
+      "image": "miniwhite1.jpeg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "arrivals.arrival",
+    "fields": {
+      "product_id": 17,
+      "name": "Prada Nylon Belt Bag",
+      "price": "355",
+      "image": "beltbag1.jpeg"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "arrivals.arrival",
+    "fields": {
+      "product_id": 18,
+      "name": "Dior Mini Saddle",
+      "price": "895",
+      "image": "saddle1.jpeg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "arrivals.arrival",
+    "fields": {
+      "product_id": 19,
+      "name": "Fendi Zucchino Clutch",
+      "price": "295",
+      "image": "zucchino1.jpeg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "arrivals.arrival",
+    "fields": {
+      "product_id": 20,
+      "name": "Chanel Denim Sunglasses",
+      "price": "245",
+      "image": "jeans1.jpeg"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "arrivals.arrival",
+    "fields": {
+      "product_id": 21,
+      "name": "Prada Tortoise Sunglasses",
+      "price": "245",
+      "image": "pradator1.jpeg"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "arrivals.arrival",
+    "fields": {
+      "product_id": 22,
+      "name": "Fendi Diamanté Sunglasses",
+      "price": 135,
+      "image": "fendisunnies1.jpeg"
+    }
+  }
+]

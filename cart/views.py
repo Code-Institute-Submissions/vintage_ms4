@@ -32,7 +32,7 @@ def remove_from_cart(request, item_id):
         product = get_object_or_404(Product, pk=item_id)
         bag = request.session.get('cart', {})
         bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your cat')
+        messages.success(request, f'Removed {product.name} from your bag')
 
         request.session['cart'] = bag
         return HttpResponse(status=200)
