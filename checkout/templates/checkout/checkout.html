@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+        <!-- Checkout -->
+        <div class=" col-12 col-lg-8">
+            <div class="checkout_details_area mt-50 clearfix">
+
+                <!-- Checkout Information Section -->
+                <div class="cart-title">
+                    <h2>Checkout Information</h2>
+                </div>
+
+                <form action="{% url 'checkout' %}" method="POST">
+
+                    {% csrf_token %}
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            {{ order_form.first_name | as_crispy_field }}
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            {{ order_form.last_name | as_crispy_field }}
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            {{ order_form.email | as_crispy_field }}
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            {{ order_form.street_address1 | as_crispy_field }}
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            {{ order_form.street_address2 | as_crispy_field }}
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            {{ order_form.town_or_city | as_crispy_field }}
+                        </div>
+
+                        <div id="country-field" class="col-12 col-md-6 mb-3">
+                            {{ order_form.country | as_crispy_field }}
+                        </div>
+
+                        <div class="col-12 col-md-6 mb-3">
+                            {{ order_form.phone_number | as_crispy_field }}
+                        </div>
+
+                        <div class="custom-control custom-checkbox d-block mb-2">
+
+                            {% if user.is_authenticated %}
+
+                                <label class="custom-control-label" for="customCheck2">Save Order Info to my
+                                    Profile</label>
+
+                                <input class="custom-control-input ml-2 mr-0" type="checkbox" id="customCheck2"
+                                       name="save-info" checked>
+
+                            {% else %}
+
+                                <label class="custom-control-label" for="customCheck2">
+                                    <a class="text-info" href="{% url 'account_signup' %}">CREATE AN ACCOUNT</a> or
+
+                                    <a class="text-info" href="{% url 'account_login' %}">LOGIN</a> to save this
+                                    information
+                                </label>
+
+                            {% endif %}
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+            <div class="cart-summary">
+                <h5>Cart Summary </h5>
+                <ul class="summary-table">
+
+                    {% if total %}
+
+                        <li><span>Total: £ {{ total|floatformat:2 }}</span></li>
+
+                    {% else %}
+
+                        <li><span>Total: £ 0.00 </span></li>
+
+                    {% endif %}
+
+
+                    <li><span>Delivery: £ {{ delivery|floatformat:2 }}</span></li>
+                    <li><h6 class="mt-4"><strong>Grand Total: £ {{ grand_total|floatformat:2 }}</strong></h6>
+                    </li>
+                </ul>
+                <div class="cart-btn mt-100">
+                    {% if cart_items %}
+
+                        <a href="" class="btn amado-btn w-100">PAY</a>
+
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Credit Card and Donate Section -->
+        <div class="cart-summary">
+            <h5>Credit Card Details</h5>
+
+            <!-- A Stripe card element will go here -->
+            <div class="mb-3 mt-3" id="card-element"></div>
+
+            <!-- Used to display form errors -->
+            <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+
+            <!-- Pass the client secret to the view so we can get the payment intent id -->
+            <input type="hidden" value="{{ client_secret }}" name="client_secret">
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block postloadjs %}
+
+    {{ block.super }}
+
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+
+    {{ client_secret|json_script:"id_client_secret" }}
+
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+
+{% endblock %}
