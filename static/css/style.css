@@ -49,12 +49,12 @@ select {
     overflow: visible;
     background-color: #0b0b0b;
     opacity: 0.5;
-    color: #fff56a;
+    color: #fbb710;
     padding: 20px;
 }
 
 .toast-text {
-    color: #ffc107;
+    color: #fbb710;
 }
 
 .toast-capper {
@@ -68,4 +68,21 @@ select {
     background-color: white;
     opacity: 0.8;
     color: black;
+    padding: 5px;
+    border-radius: 5px;
+
 }
+
+/* Latest Options Styles */
+
+.hover-arr {
+    background-color: #0b0b0b;
+    opacity: 0.7;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.text-price {
+    color: #f8f8f8;
+}
+

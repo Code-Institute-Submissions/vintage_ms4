@@ -16,17 +16,15 @@
                     <a href="{% url 'single_product' arrival.product_id %}">
                         <img src="{{ arrival.image1.url }}" alt="Image">
                         <!-- Hover Content -->
-                        <div class="hover-content">
+                        <div class="hover-content hover-arr">
                             <div class="line"></div>
-                            <p>{{arrival.price}}</p>
-                            <h4> {{arrival.name}}</h4>
+                            <p class="">£{{arrival.price}}</p>
+                            <h5 class="text-price"> {{arrival.name}}</h5>
                         </div>
                     </a>
                 </div>
                 {% endfor %}
             </div>
         </div>
-
-
 
 {% endblock %}
