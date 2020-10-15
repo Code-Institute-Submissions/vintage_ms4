@@ -10,7 +10,9 @@
 
 {% block content %}
 
-
+<div class="cart-table-area section-padding-100">
+            <div class="container-fluid">
+                <div class="row">
 
         <!-- Checkout -->
         <div class=" col-12 col-lg-8">
@@ -21,7 +23,7 @@
                     <h2>Checkout Information</h2>
                 </div>
 
-                <form action="{% url 'checkout' %}" method="POST">
+                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
 
                     {% csrf_token %}
 
@@ -50,13 +52,15 @@
                             {{ order_form.town_or_city | as_crispy_field }}
                         </div>
 
-                        <div id="country-field" class="col-12 col-md-6 mb-3">
+                        <div class="col-12 col-md-6 mb-3">
+                            {{ order_form.postcode | as_crispy_field }}
+                        </div>
+
+                        <div id="country-field" class="col-12 col-md-6 mb-20">
                             {{ order_form.country | as_crispy_field }}
                         </div>
 
-                        <div class="col-12 col-md-6 mb-3">
-                            {{ order_form.phone_number | as_crispy_field }}
-                        </div>
+
 
                         <div class="custom-control custom-checkbox d-block mb-2">
 
@@ -105,32 +109,44 @@
                     <li><h6 class="mt-4"><strong>Grand Total: £ {{ grand_total|floatformat:2 }}</strong></h6>
                     </li>
                 </ul>
-                <div class="cart-btn mt-100">
-                    {% if cart_items %}
+            <div class="cart-btn">
 
-                        <a href="" class="btn amado-btn w-100">PAY</a>
 
-                    {% endif %}
+                        <a href="{% url 'view_cart' %}" class="btn amado-btn w-100">Adjust Bag</a>
+
+
+
+                </div>
+            <br>
+
+                <div class="mt-50">
+                            <h5>Credit Card Details</h5>
+
+                            <div class="mb-3" id="card-element"></div>
+
+                            <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+
+                            <!-- Pass the client secret to the view so we can get the payment intent id -->
+                            <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                        </div>
+
+
+                <div class="cart-btn">
+
+
+                        <a href="" class="btn amado-btn active w-100">PAY</a>
+
+
 
                 </div>
             </div>
         </div>
 
-        <!-- Credit Card and Donate Section -->
-        <div class="cart-summary">
-            <h5>Credit Card Details</h5>
 
-            <!-- A Stripe card element will go here -->
-            <div class="mb-3 mt-3" id="card-element"></div>
-
-            <!-- Used to display form errors -->
-            <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-
-            <!-- Pass the client secret to the view so we can get the payment intent id -->
-            <input type="hidden" value="{{ client_secret }}" name="client_secret">
-        </div>
 
     </div>
+            </div>
+</div>
 
 {% endblock %}
 
@@ -145,3 +161,4 @@
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 
 {% endblock %}
+
