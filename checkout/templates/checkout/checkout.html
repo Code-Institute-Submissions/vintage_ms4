@@ -21,6 +21,7 @@
                 <!-- Checkout Information Section -->
                 <div class="cart-title">
                     <h2>Checkout Information</h2>
+                    <p>Please fill out the form to complete the transaction!</p>
                 </div>
 
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
@@ -28,13 +29,10 @@
                     {% csrf_token %}
 
                     <div class="row">
-                        <div class="col-md-6 mb-3">
-                            {{ order_form.first_name | as_crispy_field }}
+                        <div class="col-12 mb-3">
+                            {{ order_form.full_name | as_crispy_field }}
                         </div>
 
-                        <div class="col-md-6 mb-3">
-                            {{ order_form.last_name | as_crispy_field }}
-                        </div>
 
                         <div class="col-12 mb-3">
                             {{ order_form.email | as_crispy_field }}
@@ -120,7 +118,7 @@
             <br>
 
                 <div class="card-element mt-50">
-                            <h5>Credit Card Details</h5>
+                            <h5>Payment Details</h5>
 
                             <div class="mb-3" id="card-element"></div>
 
