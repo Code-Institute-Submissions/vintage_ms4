@@ -10,142 +10,124 @@
 
 {% block content %}
 
-<div class="cart-table-area section-padding-100">
-            <div class="container-fluid">
-                <div class="row">
+    <div class="cart-table-area section-padding-100">
+        <div class="container-fluid">
+            <div class="row">
 
-        <!-- Checkout -->
-        <div class=" col-12 col-lg-6">
-            <div class="checkout_details_area mt-50 clearfix">
+                <!-- Checkout -->
+                <div class=" col-12 col-lg-6">
+                    <div class="checkout_details_area mt-50 clearfix">
 
-                <!-- Checkout Information Section -->
-                <div class="cart-title">
-                    <h2>Checkout Information</h2>
-                    <p>Please fill out the form to complete the transaction!</p>
+                        <!-- Checkout Information Section -->
+                        <div class="cart-title">
+                            <h2>Checkout Information</h2>
+                            <p>Please fill out the form to complete the transaction!</p>
+                        </div>
+
+                        <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+
+                            {% csrf_token %}
+
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    {{ order_form.full_name | as_crispy_field }}
+                                </div>
+
+
+                                <div class="col-12 mb-3">
+                                    {{ order_form.email | as_crispy_field }}
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                    {{ order_form.street_address1 | as_crispy_field }}
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                    {{ order_form.street_address2 | as_crispy_field }}
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                    {{ order_form.town_or_city | as_crispy_field }}
+                                </div>
+
+                                <div class="col-12 col-md-6 mb-3">
+                                    {{ order_form.postcode | as_crispy_field }}
+                                </div>
+
+                                <div id="country-field" class="col-12 col-md-6 mb-3">
+                                    {{ order_form.country | as_crispy_field }}
+                                </div>
+
+
+                                <div class="custom-control custom-checkbox d-block mb-2">
+
+                                    {% if user.is_authenticated %}
+
+                                        <label class="custom-control-label" for="customCheck2">Save Order Info to my
+                                            Profile</label>
+
+                                        <input class="custom-control-input ml-2 mr-0" type="checkbox" id="customCheck2"
+                                               name="save-info" checked>
+
+                                    {% else %}
+
+                                        <label class="custom-control-label" for="customCheck2">
+                                            <a class="text-info" href="{% url 'account_signup' %}">CREATE AN ACCOUNT</a>
+                                            or
+
+                                            <a class="text-info" href="{% url 'account_login' %}">LOGIN</a> to save this
+                                            information
+                                        </label>
+
+                                    {% endif %}
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
-                <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-
-                    {% csrf_token %}
-
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            {{ order_form.full_name | as_crispy_field }}
-                        </div>
-
-
-                        <div class="col-12 mb-3">
-                            {{ order_form.email | as_crispy_field }}
-                        </div>
-
-                        <div class="col-12 mb-3">
-                            {{ order_form.street_address1 | as_crispy_field }}
-                        </div>
-
-                        <div class="col-12 mb-3">
-                            {{ order_form.street_address2 | as_crispy_field }}
-                        </div>
-
-                        <div class="col-12 mb-3">
-                            {{ order_form.town_or_city | as_crispy_field }}
-                        </div>
-
-                        <div class="col-12 col-md-6 mb-3">
-                            {{ order_form.postcode | as_crispy_field }}
-                        </div>
-
-                        <div id="country-field" class="col-12 col-md-6 mb-3">
-                            {{ order_form.country | as_crispy_field }}
-                        </div>
-
-
-
-                        <div class="custom-control custom-checkbox d-block mb-2">
-
-                            {% if user.is_authenticated %}
-
-                                <label class="custom-control-label" for="customCheck2">Save Order Info to my
-                                    Profile</label>
-
-                                <input class="custom-control-input ml-2 mr-0" type="checkbox" id="customCheck2"
-                                       name="save-info" checked>
-
+                <div class="col-12 col-lg-6">
+                    <div class="cart-summary">
+                        <h5>Cart Summary </h5>
+                        <ul class="summary-table">
+                            {% if total %}
+                                <li><span>Total: £ {{ total|floatformat:2 }}</span></li>
                             {% else %}
-
-                                <label class="custom-control-label" for="customCheck2">
-                                    <a class="text-info" href="{% url 'account_signup' %}">CREATE AN ACCOUNT</a> or
-
-                                    <a class="text-info" href="{% url 'account_login' %}">LOGIN</a> to save this
-                                    information
-                                </label>
-
+                                <li><span>Total: £ 0.00 </span></li>
                             {% endif %}
 
+                            <li><span>Delivery: £ {{ delivery|floatformat:2 }}</span></li>
+                            <li><h6 class="mt-4"><strong>Grand Total: £ {{ grand_total|floatformat:2 }}</strong></h6>
+                            </li>
+                        </ul>
+                        <div class="cart-btn">
+                            <a href="{% url 'view_cart' %}" class="btn amado-btn w-100">Adjust Bag</a>
                         </div>
+
+                        <form action="{% url 'checkout' %}" method="POST"
+                              id="payment-form">
+                            <div class="card-element mt-50">
+                                <h5>Payment Details</h5>
+
+                                <div class="mb-3" id="card-element"></div>
+
+                                <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+
+                                <!-- Pass the client secret to the view so we can get the payment intent id -->
+                                <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                            </div>
+                            <div class="cart-btn mt-5 ">
+                                <a href="" id="submit-button" class="btn amado-btn active w-100">PAY</a>
+                            </div>
+                        </form>
+
                     </div>
-                </form>
+                </div>
+
             </div>
         </div>
-
-        <div class="col-12 col-lg-6">
-            <div class="cart-summary">
-                <h5>Cart Summary </h5>
-                <ul class="summary-table">
-
-                    {% if total %}
-
-                        <li><span>Total: £ {{ total|floatformat:2 }}</span></li>
-
-                    {% else %}
-
-                        <li><span>Total: £ 0.00 </span></li>
-
-                    {% endif %}
-
-
-                    <li><span>Delivery: £ {{ delivery|floatformat:2 }}</span></li>
-                    <li><h6 class="mt-4"><strong>Grand Total: £ {{ grand_total|floatformat:2 }}</strong></h6>
-                    </li>
-                </ul>
-            <div class="cart-btn">
-
-
-                        <a href="{% url 'view_cart' %}" class="btn amado-btn w-100">Adjust Bag</a>
-
-
-
-                </div>
-            <br>
-
-                <div class="card-element mt-50">
-                            <h5>Payment Details</h5>
-
-                            <div class="mb-3" id="card-element"></div>
-
-                            <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-
-                            <!-- Pass the client secret to the view so we can get the payment intent id -->
-                            <input type="hidden" value="{{ client_secret }}" name="client_secret">
-                        </div>
-
-
-                <div class="cart-btn mt-5 ">
-
-
-                        <a href="" id="submit-button" class="btn amado-btn active w-100">PAY</a>
-
-
-
-                </div>
-            </div>
-        </div>
-
-
-
     </div>
-            </div>
-</div>
-
 {% endblock %}
 
 {% block postloadjs %}

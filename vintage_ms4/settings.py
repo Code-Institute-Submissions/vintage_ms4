@@ -11,7 +11,12 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 import os
+if os.path.exists('env.py'):
+    import env
+
 from pathlib import Path
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY', '')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -174,5 +179,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Stripe
 STANDARD_DELIVERY_PERCENTAGE = 5
 STRIPE_CURRENCY = 'gbp'
-STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
