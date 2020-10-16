@@ -122,3 +122,27 @@ select {
 
 
 
+.checkout_details_area #payment-form #country-field #div_id_country .nice-select {
+    width: 100%;
+    padding: 0 0 0 2.4em;
+}
+
+.checkout_details_area #payment-form #country-field #div_id_country .nice-select .list {
+    overflow: scroll;
+    max-height: 40em;
+    z-index: 99999;
+}
+
+.cart-table-area .row #profile-update-form #div_id_default_country .nice-select {
+    width: 100%;
+    padding: 0 0 0 1em;
+    color: #495057;
+    font-size: medium;
+}
+
+.cart-table-area .row #profile-update-form #div_id_default_country .nice-select .list {
+    overflow: scroll;
+    max-height: 20em;
+    z-index: 99999;
+
+}

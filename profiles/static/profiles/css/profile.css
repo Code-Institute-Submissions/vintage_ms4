@@ -1,0 +1,12 @@
+.order-history {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.country-list {
+    overflow: scroll;
+    max-height: 50em;
+    z-index: 99999;
+    width: 100%;
+    padding: 0 0 0 2.4em;
+}

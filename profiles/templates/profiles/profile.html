@@ -12,21 +12,18 @@
 
 <div class="cart-table-area section-padding-100">
     <div class="container-fluid">
-        <div class="row">
-
-            <!-- Profile Section -->
-            <div class=" col-12 col-lg-6 order-2 order-lg-1">
-                <div class="checkout_details_area mt-50 clearfix">
-                    <div class="cart-title text-center golden-text">
-                        <h2>My Profile</h2>
+        <div class="row m-10">
+            <div class="col-12 checkout_details_area mt-50 clearfix">
+                <div class="cart-title">
+                        <h2 class="text-center">My Profile</h2>
                     </div>
-                </div>
             </div>
         </div>
 
+
         <div class="row">
             <div id="profile-update-form" class="col-12 col-lg-6">
-                <h4 class="golden-text mb-4 text-center">Default Billing Information</h4>
+                <h4 class="gold-text mb-4 text-center">Delivery Information</h4>
                 <form action="{% url 'profile' %}" method="POST">
 
                     {% csrf_token %}
@@ -38,7 +35,7 @@
             </div>
 
             <div class="col-12 col-lg-6">
-                <h4 class="golden-text text-center mb-4">Order History</h4>
+                <h4 class="text-center mb-4">Order History</h4>
 
                 <div class="cart-table clearfix">
                     <table class="table table-responsive text-center">
@@ -80,7 +77,7 @@
                                         {% for item in order.lineitems.all %}
 
                                         <li class="small">
-                                            {{ item.antiquity.name }} x {{ item.quantity }}
+                                            {{ item.product.name }} x {{ item.quantity }}
                                         </li>
 
                                         {% endfor %}
