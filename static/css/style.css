@@ -86,7 +86,39 @@ select {
     color: #f8f8f8;
 }
 
-/* ------------------------------- Checkout */
+/* ------------------------------- Allauth */
+
+.allauth-form-inner-content {
+    padding: 0;
+    margin: 0;
+}
+
+.allauth-form-inner-content #allauth-bg {
+    background-color: #f5f7fa;
+    padding: 2em;
+}
+
+@media (max-width: 767px) {
+    .allauth-form-inner-content #allauth-bg {
+        margin: 0 1em 2em 1em;
+    }
+}
+
+.allauth-form-inner-content #allauth-bg div {
+    margin-bottom: 1em;
+}
+
+.allauth-form-inner-content input {
+    border-radius: 0;
+}
+
+.allauth-form-inner-content .golden-text {
+    color: #fbb710;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
 
 
 
