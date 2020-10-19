@@ -100,7 +100,7 @@ def add_product(request):
     return render(request, template, context)
 
 
-def edit_antiquity(request, product_id):
+def edit_product(request, product_id):
     """ Edit an item """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only admin can do that.')
@@ -127,3 +127,14 @@ def edit_antiquity(request, product_id):
 
     return render(request, template, context)
 
+
+def delete_product(request, product_id):
+    """ Delete a antiquity from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only admin can do that.')
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'An Item has deleted!')
+    return redirect(reverse('products'))
