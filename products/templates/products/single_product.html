@@ -171,6 +171,24 @@
 
                     </form>
 
+                        {% if request.user.is_superuser %}
+
+                            <div class="cart-summary mt-5">
+                            <div class="row payment-method submit-button pr-2">
+                                <div class="col-12 col-md-6 cart-btn px-2 w-100  mb-md-0">
+                                    <a href="{% url 'edit_product' product.id %}"
+                                        class="btn amado-btn profile-button active w-100">Edit</a>
+                                </div>
+
+                                <div class="col-12 col-md-6 cart-btn px-2 w-100 mb-md-0">
+                                    <a href="{% url 'delete_product' product.id %}"
+                                        class="btn amado-btn profile-button active w-100">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% endif %}
+
                 </div>
             </div>
         </div>
