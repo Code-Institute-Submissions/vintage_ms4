@@ -176,7 +176,7 @@
 
                     {% if request.user.is_superuser %}
 
-                    <a href="" id="add-product-btn" class="btn amado-btn mb-15">Add
+                    <a href="{% url 'add_product' %}" id="add-product-btn" class="btn amado-btn mb-15">Add
                         Item</a>
 
                     {% endif %}

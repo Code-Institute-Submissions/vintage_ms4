@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category, Designer
+from .forms import ProductForm
 
 
 def all_products(request):
@@ -72,3 +73,29 @@ def single_product(request, product_id):
     }
 
     return render(request, 'products/single_product.html', context)
+
+
+def add_product(request):
+    """ Add new product to the site """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only admin can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'You successfully added an item to site.')
+            return redirect(reverse('single_product', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to an item. Please ensure the form is valid.')
+    else:
+        form = ProductForm()
+
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
