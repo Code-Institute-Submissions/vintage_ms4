@@ -1,1 +1,3 @@
-web: gunicorn vintage.wsgi:application
+web: gunicorn vintage_ms4.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
