@@ -146,3 +146,25 @@ select {
     z-index: 99999;
 
 }
+
+
+
+.cart-table-area .checkout_details_area form .add-product-row div {
+    width: 100%;
+}
+
+.cart-table-area .checkout_details_area form .add-product-row #div_id_category .nice-select {
+    width: 100%;
+    padding-top: 0;
+}
+
+.cart-table-area .checkout_details_area form .add-product-row #div_id_category .nice-select .current {
+    color: #495057;
+    font-size: medium;
+}
+
+.cart-table-area .checkout_details_area form .add-product-row #div_id_category .nice-select .list {
+    overflow: scroll;
+}
+
+
