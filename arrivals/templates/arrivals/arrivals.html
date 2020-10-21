@@ -5,11 +5,11 @@
 {% block content %}
 
 
-<!-- Product Catagories Area Start -->
-        <div class="products-catagories-area clearfix">
-            <div class="amado-pro-catagory clearfix">
+    <!-- Product Catagories -->
+    <div class="products-catagories-area clearfix">
+        <div class="amado-pro-catagory clearfix">
 
-                {% for arrival in arrivals %}
+            {% for arrival in arrivals %}
 
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
@@ -18,13 +18,15 @@
                         <!-- Hover Content -->
                         <div class="hover-content hover-arr">
                             <div class="line"></div>
-                            <p class="">£{{arrival.price}}</p>
-                            <h5 class="text-price"> {{arrival.name}}</h5>
+                            <p class="">£{{ arrival.price }}</p>
+                            <h5 class="text-price"> {{ arrival.name }}</h5>
                         </div>
                     </a>
                 </div>
-                {% endfor %}
-            </div>
+
+            {% endfor %}
+
         </div>
+    </div>
 
 {% endblock %}

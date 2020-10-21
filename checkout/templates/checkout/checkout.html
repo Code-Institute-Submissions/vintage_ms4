@@ -107,6 +107,7 @@
 
                         <form action="{% url 'checkout' %}" method="POST"
                               id="payment-form">
+                            {% csrf_token %}
                             <div class="card-element mt-50">
                                 <h5>Payment Details</h5>
 

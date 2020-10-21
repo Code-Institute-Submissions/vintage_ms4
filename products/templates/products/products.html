@@ -4,10 +4,9 @@
 
 {% block content %}
 
-    <!-- All Products Area Start -->
+    <!-- All Products -->
     <div class="shop_sidebar_area">
 
-        <!-- ##### Single Widget ##### -->
         <div class="widget catagory mb-50">
             <!-- Categories -->
             <h6 class="widget-title mb-30">Categories</h6>
@@ -21,8 +20,6 @@
                                href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a>
                         </li>
                     {% endfor %}
-
-
                 </ul>
             </div>
         </div>
@@ -62,15 +59,10 @@
                             <p>
 
 
-
-
-
-                                     <strong>{{ products|length }} </strong> Items
-
+                                <strong>{{ products|length }} </strong> Items
 
 
                             </p>
-
 
 
                         </div>
@@ -141,7 +133,7 @@
                                 <div class="product-meta-data">
                                     <div class="line"></div>
 
-                                    <p class="product-price">€{{ product.price }}</p>
+                                    <p class="product-price">£{{ product.price }}</p>
 
                                     <a href="{% url 'single_product' product.id %}">
                                         <h6>{{ product.name }}</h6>
@@ -173,8 +165,6 @@
                                     </form>
                                 </div>
                             </div>
-
-
 
 
                         </div>

@@ -14,28 +14,24 @@
 
                     <div class="cart-table clearfix">
                         <table class="table table-responsive text-center">
-
-
                             <tbody>
-                            <tr>
+                                <tr>
 
-                                {% if cart_items %}
+                                    {% if cart_items %}
 
-                                    <thead>
-                                    <tr>
-                                        <th>Image</th>
+                                        <thead>
+                                            <tr>
+                                                <th>Image</th>
 
-                                        <th>Name</th>
+                                                <th>Name</th>
 
-                                        <th>Quantity</th>
+                                                <th>Quantity</th>
 
-                                        <th>Value</th>
-                                    </tr>
-                                    </thead>
+                                                <th>Value</th>
+                                            </tr>
+                                         </thead>
 
                                     {% for item in cart_items %}
-
-
 
                                         <!-- Item Image -->
                                         <td class="cart_product_img">
@@ -68,9 +64,7 @@
                                         <td class="cart_product_desc">
                                             <form class="update-form" action=""
                                                   method="POST">
-
                                                 <p>1</p>
-
                                             </form>
                                         </td>
 
@@ -87,15 +81,12 @@
 
                                         </tr>
 
-
-
                                     {% endfor %}
 
                                 {% else %}
 
                                     <div class="cart-btn mt-50 text-md-center">
                                         <p class="lead">Your cart is empty</p>
-
                                         <a href="{% url 'products' %}" class="btn amado-btn mt-30">Go Shopping</a>
                                     </div>
 
@@ -103,9 +94,7 @@
 
                             </tbody>
                         </table>
-
                     </div>
-
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="cart-summary">
@@ -122,9 +111,8 @@
 
                             {% endif %}
 
-
-                            <li><span>Delivery: £ {{ delivery|floatformat:2 }}</span></li>
-                            <li><h6 class="mt-4"><strong>Grand Total: £ {{ grand_total|floatformat:2 }}</strong></h6>
+                            <li><span>Delivery: £{{ delivery|floatformat:2 }}</span></li>
+                            <li><h6 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h6>
                             </li>
                         </ul>
                         <div class="cart-btn mt-100">
@@ -133,8 +121,8 @@
                                 <a href="{% url 'checkout' %}" class="btn amado-btn w-100 m-1">Checkout</a>
                                 <a href="{% url 'products' %}" class="btn amado-btn active w-100 m-1">Keep Shopping</a>
 
-
                             {% else %}
+
                                 <a href="{% url 'checkout' %}" class="btn amado-btn w-100">Checkout</a>
 
                             {% endif %}

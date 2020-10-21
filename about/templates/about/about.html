@@ -4,20 +4,18 @@
 
 {% block content %}
 
-    <!-- Main Landing Page Section -->
-    <div class="products-catagories-area clearfix home-page">
+    <!-- About Page -->
+    <div class="products-catagories-area clearfix">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-7 main-logo">
-                    <a href="" class="mb-4"><img src="{% static 'images/core_img/main_logo.png' %}"
-                                                 alt="Main Logo"></a>
 
+                <div class="d-none d-md-block col-md-6 main-logo">
+                    <img class="mt-50" src="{% static 'images/core_img/chanel.jpg' %}"
+                         alt="Main Logo">
+                </div>
 
-                    <div class="mt-2 mb-4 box-p">
-
-
-
-                    <p>
+                <div class="col-12 col-md-6 mt-50 main-logo">
+                    <p class="box-p box-p-tex">
                         a passion for vintage ~
 
                         Here at Vintage we source and sell pre-loved vintage items.
@@ -26,26 +24,25 @@
 
                         Each piece is carefully selected and authenticated, purchased from verified suppliers.
 
-                        High-quality vintage items are yours to live in and love whilst increasing in value each year.
+                        High-quality vintage items are yours to live in and love whilst increasing in value each
+                        year.
 
-                        It is never too soon to start collecting, as an investment in your wardrobe - and in yourself.
+                        It is never too soon to start collecting, as an investment in your wardrobe - and in
+                        yourself.
 
-                        By purchasing vintage, you can be confident that you’re making a positively conscious shopping
-                        choice.
-
+                        By purchasing vintage, you can be confident that you’re making a positively conscious
+                        shopping choice.
+                        <br>
+                        For any queries, send us a DM on Instagram!
+                        <br>
                         With love, A ox
                     </p>
 
- </div>
-                </div>
-                <div class="col-7 main-logo">
-                    <a href="{% url 'products' %}" class="btn amado-btn mb-15">Shop Here</a>
-
+                    <a href="{% url 'products' %}" class="btn amado-btn mt-15 mb-50">Shop Here</a>
                 </div>
 
             </div>
         </div>
     </div>
-    <!-- Main Landing Page Section End -->
 
 {% endblock %}

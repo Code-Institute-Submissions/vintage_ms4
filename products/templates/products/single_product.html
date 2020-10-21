@@ -4,7 +4,7 @@
 
 {% block content %}
 
-    <!-- Product Details Area Start -->
+    <!-- Single Product Content -->
     <div class="single-product-area section-padding-100 clearfix">
         <div class="container-fluid">
 
@@ -23,6 +23,7 @@
                 </div>
             </div>
 
+            <!-- Image Carousel -->
             <div class="row">
                 <div class="col-12 col-lg-7">
                     <div class="single_product_thumeb">
@@ -33,21 +34,21 @@
                                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"
                                         style="background-image: url('{{ product.image1.url }}');">
                                     </li>
-                                     {% if product.image2 %}
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"
-                                        style="background-image: url('{{ product.image2.url }}');">
-                                    </li>
-                                         {% endif %}
-                                 {% if product.image3 %}
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"
-                                        style="background-image: url('{{ product.image3.url }}');">
-                                    </li>
-                                     {% endif %}
-                                 {% if product.image4 %}
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"
-                                        style="background-image: url('{{ product.image4.url }}');">
-                                    </li>
-                                     {% endif %}
+                                    {% if product.image2 %}
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"
+                                            style="background-image: url('{{ product.image2.url }}');">
+                                        </li>
+                                    {% endif %}
+                                    {% if product.image3 %}
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"
+                                            style="background-image: url('{{ product.image3.url }}');">
+                                        </li>
+                                    {% endif %}
+                                    {% if product.image4 %}
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="2"
+                                            style="background-image: url('{{ product.image4.url }}');">
+                                        </li>
+                                    {% endif %}
                                 </ol>
                                 <div class="carousel-inner">
                                     {% if product.image1 %}
@@ -139,9 +140,7 @@
                             <div class="short_overview my-5">
                                 <p><strong>Description:</strong></p>
 
-
                                 <p>{{ product.description }}</p>
-
 
                             </div>
                         </div>
@@ -153,8 +152,7 @@
 
                             <div class="cart-btn d-flex mb-50">
                                 <p>Qty</p>
-
-
+                                <!-- Only one item available usually -->
                                 <div class="quantity form-group">
                                     <div class="input-group">
                                         <input type="number" class="form-control qty_input" name="quantity" value="1"
@@ -163,36 +161,31 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-12">
                                 <input type="submit" class="btn amado-btn" value="Add to Cart">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
-
-                    </form>
+                        </form>
 
                         {% if request.user.is_superuser %}
-
                             <div class="cart-summary mt-5">
-                            <div class="row payment-method submit-button pr-2">
-                                <div class="col-12 col-md-6 cart-btn px-2 w-100  mb-md-0">
-                                    <a href="{% url 'edit_product' product.id %}"
-                                        class="btn amado-btn profile-button active w-100">Edit</a>
-                                </div>
-
-                                <div class="col-12 col-md-6 cart-btn px-2 w-100 mb-md-0">
-                                    <a href="{% url 'delete_product' product.id %}"
-                                        class="btn amado-btn profile-button active w-100">Delete</a>
+                                <div class="row payment-method submit-button pr-2">
+                                    <div class="col-12 col-md-6 cart-btn px-2 w-100  mb-md-0">
+                                        <a href="{% url 'edit_product' product.id %}"
+                                           class="btn amado-btn profile-button active w-100">Edit</a>
+                                    </div>
+                                    <div class="col-12 col-md-6 cart-btn px-2 w-100 mb-md-0">
+                                        <a href="{% url 'delete_product' product.id %}"
+                                           class="btn amado-btn profile-button active w-100">Delete</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        {% endif %}
 
-                    {% endif %}
-
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- Product Details Area End -->
 

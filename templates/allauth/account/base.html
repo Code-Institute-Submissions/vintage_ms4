@@ -2,17 +2,17 @@
 
 {% block content %}
 
-<div class="container products-catagories-area clearfix mt-5">
-    <!-- <div class="overlay"></div> -->
-    <div class="row text-center mt-md-5 ml-md-5">
-        <div class="col-12 col-md-8 col-lg-6 allauth-form-inner-content">
-            <div id="allauth-bg">
-                {% block inner_content %}
+    <div class="container products-catagories-area clearfix mt-5 mb-5">
+        <!-- <div class="overlay"></div> -->
+        <div class="row text-center justify-content-center">
+            <div class="col-12 col-md-6 allauth-form">
+                <div class="allauth-inner">
+                    {% block inner_content %}
 
-                {% endblock %}
+                    {% endblock %}
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 {% endblock %}
