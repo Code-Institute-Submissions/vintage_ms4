@@ -140,7 +140,6 @@ def checkout_success(request, order_number):
 
         if save_info:
             profile_data = {
-                'default_full_name': order.full_name,
                 'default_phone_number': order.phone_number,
                 'default_town_or_city': order.town_or_city,
                 'default_street_address1': order.street_address1,
