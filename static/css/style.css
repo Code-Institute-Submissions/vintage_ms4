@@ -37,7 +37,6 @@
     top: 5vh;
 }
 
-
 /* ------------------------------- Products Details */
 
 .gold-text {
@@ -87,17 +86,15 @@ select {
 
 /* ------------------------------- Allauth */
 
-
 .allauth-form .allauth-inner {
     background-color: #f5f7fa;
     padding: 25px;
 }
 
-
 .allauth-form input {
     border-radius: 0;
-}
 
+}
 
 .allauth-form label:not([for='id_remember']) {
     display: none;
@@ -144,7 +141,7 @@ select {
 }
 
 @media (max-width: 767px) {
-    .allauth-form-inner-content #allauth-bg {
+    .allauth-form {
         margin: 0 2em 2em 1em;
     }
 }
