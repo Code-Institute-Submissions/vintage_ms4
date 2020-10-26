@@ -4,17 +4,17 @@ document.getElementById('subscribe-form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
-   btn.value = 'Sending...';
+   btn.value = 'Subscribing...';
 
    const serviceID = 'default_service';
    const templateID = 'template_8jquzfe';
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
+      btn.value = 'Subscribe';
+      alert('Success!');
     }, (err) => {
-      btn.value = 'Send Email';
+      btn.value = 'Subscribe';
       alert(JSON.stringify(err));
     });
 });
