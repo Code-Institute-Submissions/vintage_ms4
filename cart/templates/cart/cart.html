@@ -70,7 +70,7 @@
 
                                         <!-- Item Value -->
                                         <td class="price mt-5">
-                                            <span>€{{ item.product.price }}</span><br><br>
+                                            <span>£{{ item.product.price }}</span><br><br>
 
                                             <!-- Delete Item Link  -->
                                             <button type="submit"
@@ -103,11 +103,11 @@
 
                             {% if total %}
 
-                                <li><span>Total: £ {{ total|floatformat:2 }}</span></li>
+                                <li><span>Total: £{{ total|floatformat:2 }}</span></li>
 
                             {% else %}
 
-                                <li><span>Total: £ 0.00 </span></li>
+                                <li><span>Total: £0.00 </span></li>
 
                             {% endif %}
 

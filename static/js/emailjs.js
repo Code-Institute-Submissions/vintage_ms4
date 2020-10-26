@@ -1,4 +1,4 @@
-const btn = document.getElementById('button');
+const btn = document.getElementById('sub-button');
 
 document.getElementById('subscribe-form')
  .addEventListener('submit', function(event) {
@@ -6,10 +6,10 @@ document.getElementById('subscribe-form')
 
    btn.value = 'Subscribing...';
 
-   const serviceID = 'default_service';
+   const serviceID = 'service_q2l54nc';
    const templateID = 'template_8jquzfe';
 
-   emailjs.sendForm(serviceID, templateID, this)
+   emailjs.send(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Subscribe';
       alert('Success!');
