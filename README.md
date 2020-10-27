@@ -1,22 +1,25 @@
-# Full Stack Frameworks With Django 
+># Full Stack Frameworks With Django 
 
 ## Milestone Project nr.4 -- *VINTAGE*
 
-*Repository
-Live website
-Wireframes*
+&nbsp;
+- Repository
+&nbsp;
+- Live website
+&nbsp;
+- Wireframes
 
 #
-
+&nbsp;
 This is my 4th and final project for the Full-Stack Web Development Diploma with Code Institute.
 I have decided to design a fully functional e-commerce site - The Vintage.
 The idea behind it this project came from my love for vintage and unique pieces. While doing research online I have came across various websites which have inspired me to create something of my own. 
-
+&nbsp;
 As I am fascinated by the world of fashion and very often browsing the internet, I would be very intrigued if I came across a small brand selling some golden items. Obviously as those products usually come with hefty price tag, you would also relay on their social media account to check they are who they are - which is something I would want to highlight on my page and have the social media accounts always visible. 
-
+&nbsp;
 The site is created on a full stack Django framework, deployed on Heroku and uses AWS S3 to host media and static files. While working locally it uses the Sqlite3 database. When deployed to Heroku - it uses Postgres database. Full authentication on site is provided by using Django Allauth. Super users have availability to add edit and delete items. Normal users can register/login to keep track of theirs orders. Plus their delivery details can be stored to provide better user experience and faster checkout.
-
-
+#
+&nbsp;
 # Table of Contents
 
  1. User Experience 
@@ -34,22 +37,22 @@ The site is created on a full stack Django framework, deployed on Heroku and use
  6. Credits
 
 #
-# USER EXPERIENCE
-
+># USER EXPERIENCE
+&nbsp;
 Main goal of this website was to have a beautiful and easy mixture of vintage items in a modern setting. I wanted this site to be easy to navigate, to feel unique and have high quality images (there is a page that focuses mainly on images)
-
+&nbsp;
 The website is fully responsive, thanks to the bootstrap template I have used to develop the page - Amado. I have actually made a payment to use this template without featuring credits but I feel as this is a student project, I shouldn’t take credit for everything.
-
+&nbsp;
 #
 ### A user stories
-
+&nbsp;
 The websites allows for all kind of users to enjoy the features. You can be just a random unregistered visitor, potential buyer,  but you can also create an account to keep a track of your purchases and to store some of your information.
 
 Site administrator is created in Django and it will be granted to owner of the page and their team - per request.
 
 *Summing up:*
 
-**A Visitor :**
+**A Visitor:**
 
 You are able to browse through the whole page - you are able to add items to the cart - you can also review your order in the cart and proceed to checkout where you will be able to finalise your order. You have an option to create an account, but you can also complete the order anonymously.
 
@@ -57,13 +60,13 @@ You are able to browse through the whole page - you are able to add items to the
 
 You can register or login if you already have an account. Once you are logged in you will have an access to My Profile tab. You will be able to see your order history but also update your details which will allow for a faster checkout as details are pulled through from database.
 
-**Site Administrator:**
+**Site Owner:**
 
 Super user will be created via Django. He/she can access the profile via typing ‘/admin’ url into browser. They will be able to execute simple commands like editing or deleting an item from the site itself. In admin page admin can access all orders emails and all other details needed to maintain successful business.
 
 #
 ### Design
-
+&nbsp;
 I have based my site on a template called Amado - live link https://colorlib.com/preview/theme/amado/  It came with own CSS (which also included fonts and some core images) and Javascript but I did ended up adding some small changes.
 
 As mentioned above I have had this template in site for quite some time now. It has been amended slightly to the needs of the project and to fit the requirements but it has generally stayed very similar to original template. 
@@ -71,14 +74,15 @@ As mentioned above I have had this template in site for quite some time now. It 
 I have created basic wireframes and they are available to see as images **here**.  They are a simple representation of what I was hoping to achieve as my final project.  I didn't feel the need to create mockups like for my previous projects, due to the fact I was already aware of the colour scheme and general layout of the website. 
 
 **Images**
+&nbsp;
 As this is a e-commerce website I felt images would play an important role. The template's landing page was a great example how images can be used to catch attention. Due to the fact I thought my site wold need some sort of information, I have amended the landing page to be a simple welcoming page and have included original design to take care of my newest arrivals. That way best pieces would be represented on a separate page, grabbing the attention by image quality and minimalistic design. 
 Temporary logo has been designed by. 
-
+&nbsp;
 #
-# Features 
-
+># Features 
+&nbsp;
 ### Exisitng
-
+&nbsp;
 The layout of this multi-page website has been created with Bootstrap 4 grid and has 7 Django Apps. 
 
 Template and static files have been created in the root application. Base template contains Head, Navbar, Subscription and Footer. All those are applicable to other apps by including base.html in their code. 
@@ -91,47 +95,49 @@ Visitors can subscribe using EmailJS.
 	- Footer
 It contains copyright information and again links to some more important parts of the website.
 
-
+&nbsp;
 1. Home App
-
+&nbsp;
 This is the backbone of the page. It contains the landing page with interesting background image and Logo. You will find short paragraph inviting you to shop with two links - to actually go shopping and to next app - About us.
-
+&nbsp;
 2. About App
-
+&nbsp;
 Its a simple page containing two divs. One of them is an image which disappears on smaller devices and another contains short information about the owner. You will also find another link to Products page (to invite you to browse on every occasion)
-
+&nbsp;
 3. All Items App
-
+&nbsp;
 This view is split in two. One the left side you will have a column where you can sort the products by their category (there are 2 main categories - sunglasses and handbags) or by designer. 
-
+&nbsp;
 On the right you will find all products displayed in two columns. They are sortable by name and price.  Also on top you will have a number of all the products and depending on the category chosen, the number should change accordingly. By hovering over the items, image will change. The page contains also a name, designer and their price and little cart item, where you can put the item to the shopping bag swiftly. 
-
+&nbsp;
 By clicking on a single item you will be redirected to a Single Product view - which is way more detailed than everywhere else on the site. On top of previous information you will also find 4-image carousel and detailed description of the item. You will be able to add an item to the cart. 
 A superuser will have additional options to edit or delete an item.
-
-
+&nbsp;
 4. New Arrivals App
-
+&nbsp;
 This is probably the most attention grabbing page including 9 images with short information about the items. Those images have a hover effect over them. This was a landing page on original Amado template but as explained above - I have amended it for a better user experience. 
 On a click you are taken to 'single_product' view where you will find a full description of each item. 
-
+&nbsp;
 This page of the website can be amended by superuser to feature latest arrivals to the shop in admin panel (as the app comes with its own model and fixture.json)
-
+&nbsp;
 5. Cart App
-
+&nbsp;
 The shopping bag application has two main columns. First of all you will see detailed information what is in your shopping bag with option to delete an item. As the number of item for sell is usually 1, there is no option to amend it. 
+&nbsp;
 To the right there will be financial information of your order: price, delivery cost and grand total. From there there are couple of options available, either to keep shopping or proceed to checkout. 
-
+&nbsp;
 6. Checkout App
-
+&nbsp;
 Similar to shopping bag, this page has also two main section. Financial cart details to the right and to the left you will find a checkout information section, where the user needs to input their billing and credit card details. The credit card section is linked to Stripe. The form needs to be fully validated before submission and card (it can be a test card from Stripe page) also needs to be valid.
-
+&nbsp;
 7. Profile App
+ &nbsp;
 Following the flow of the design, this application also has two main sections. Default Billing information - where logged in user can store them and each time the new order is made, the info would be pulled through. And another section contains order history details (order number, date, items and full price). When clicked it loads original details of the order. 
-
+&nbsp;
 ### Features still to implement 
+&nbsp;
 With little time left to polish off this project there are certain things I would like to have, but couldn't sort it in time frame given:
-
+&nbsp;
 - Full Subscription Service
 I have looked for simple and fast solution for this and by browsing online I came across EmailJS free service, which allows me to send automated email thanking for the subscription. In the future I would like to link it to Django.
 - Login via Social Links
@@ -140,11 +146,11 @@ I have seen Allauth give you an option to log in via 3rd party social accounts. 
 As this is a vintage items page, I didn't feel the massive need to include the pagination option for this project, but I believe if the business was to grow, it would be necessary. As Amado came with pagination I believe this would be a simple process to implement it. 
 - Sorting Options and Starring System 
 I would probably be looking to add a bit more sorting options - especially if I was to include a starring option via people opinions.
-
+&nbsp;
 
 #
-# Technology Used
-
+># Technology Used
+&nbsp;
 Here you can find the list of all the programmes used to create this website
 
 
@@ -157,22 +163,18 @@ Here you can find the list of all the programmes used to create this website
  - [**AWS**](https://aws.amazon.com/) - **Amazon Web Services** was used to store the media and static files for the Heroku enabled live version of the site.
 
  - [Heroku](https://heroku.com/)  - to host the project.    
-
+&nbsp;
 **Front-End** 
 - HTML - to build the foundation of the project.        
         
 - CSS  - to style the project.
 
 - [**Javascript**](https://en.wikipedia.org/wiki/JavaScript) - A number of elements on the site have **Javascript** functionality
-
+&nbsp;
 **Back-End** 
 
-- [Python](https://www.python.org/)  - back-end programming language used in this project.        
-        
-
-    
-          
-                  
+- [Python](https://www.python.org/)  - back-end programming language used in this project.             
+        &nbsp;          
 **Libraries and Frameworks**        
  - [Bootstrap](https://getbootstrap.com)  - main responsive modern front-end framework        
         
@@ -189,37 +191,34 @@ Here you can find the list of all the programmes used to create this website
 -   [Psycopg2](https://pypi.org/project/psycopg2/)  - to enable the PostgreSQL database to function with Django.
 -   [Stripe](https://stripe.com/ie)  - to handle financial transactions.
 -   [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)  - to style Django forms.
-
+&nbsp;
 #### Databases
 
 -   [SQlite3](https://www.sqlite.org/index.html)  - a development database.
 -   [PostgreSQL](https://www.postgresql.org/)  - a production database.
 
 
-
+&nbsp;
 #
-# Testing
+># Testing
 &nbsp;     
 ### Devices
-
+&nbsp;
 *Manual testing was carried out on mobile devices and desktop.*
 I also tested the site in Developer Tools. Especially useful for this was Chrome and Safari. 
 I used the full gamut of responsivity in Developer Tools, but I also tested on the specific resolutions.
 [**BrowserStack**](https://www.browserstack.com/)  - Any platform that I couldn't test in developer tools or on my own devices, I tested here.
-
+&nbsp;
 ### Validation
-
+&nbsp;
 The code has been validated using:      
-      
-      
+      &nbsp;  
  - [W3C Mark-up Validation Service](https://validator.w3.org/)      
       
  - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)      
-      
-      
+       
  - app.py was tested through  [PEP8 Online](http://pep8online.com/)     
    validator. There was just complain about few lines being too long.    
-    
     &nbsp;  
 
 ### User Scenarios
@@ -243,17 +242,19 @@ I have also tried to create account. Email has to be confirmed.
 
 
 Overall the page is working fine. There are some outstanding bugs
+&nbsp;
 #### Failed bootstrap.min.css SourceMap Load 
+&nbsp;
 Upon load of site this error appears in the browser console: "DevTools failed to load SourceMap: Could not load content for [http://127.0.0.1:8000/static/css/bootstrap.min.css.map](http://127.0.0.1:8000/static/css/bootstrap.min.css.map): HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE".
       
+&nbsp;
+# [](https://github.com/sneachda//#deployment)
+># Deployement 
 
-#
-# Deployement 
-
-  
+  &nbsp;
 The Vintage project was developed using the PyCharm  and using GitHub for version control. It is hosted on the Heroku platform, with static files on  images being hosted in AWS S3 Basket.
 
-### [](https://github.com/#local-deployment)Local Deployment
+### Local Deployment
 
 To be able to run this project, the following tools have to be installed:
 
@@ -306,7 +307,7 @@ Apart from that, you also need to create accounts with the following services:
     `python3 manage.py runserver`
 8.  To access the admin panel, you can add the  `/admin`  path at the end of the url link and login using your superuser credentials.
 
-### [](https://github.com/#heroku-deployment)Heroku Deployment
+### Heroku Deployment
 
 _To start Heroku Deployment process, you need to clone the project as described in the section above._  
 To deploy the project to  [Heroku](https://heroku.com/)  the following steps need to be completed:
@@ -398,7 +399,41 @@ Alternatively, your can deploy using Heroku CLI:
 
 15.  After successful deployment, you can view your app bu clicking  **Open App**  on Heroku platform.
 
-
+&nbsp;
 ##### Hosting media files with AWS
 
 The  **static files**  and  **media files**  (that will be uploaded by superuser - product/service images) are hosted in the  [AWS S3 Bucket](https://aws.amazon.com/). 
+
+#
+### [](https://github.com/sneachda/#credits)
+># Credits
+
+
+&nbsp;
+>**Code Used**
+
+&nbsp;
+ **Amado Template**
+&nbsp;
+The template used to create the site.
+
+-   Source:  [https://colorlib.com/wp/template/amado/](https://colorlib.com/wp/template/amado/)
+-   Preview Site:  [https://colorlib.com/preview/#amado](https://colorlib.com/preview/#amado)
+&nbsp;
+**Boutique Ado**
+&nbsp;
+I learned so much while creating the above Code Institute mini-project. 
+As previous projects gave me enough knowledge on front end design, this one really let me explore what it means to be a Full Stack developer. 
+
+I do feel I had to lean heavily on the Boutique Ado's python code - to get such a complex site designed and up and running in a relatively short period of time. The whole Fullstack Frameworks & Django module was heavily investigated while creating this website. I had also looked around other students project for inspiration and ideas and how they married their own code with course material.
+&nbsp;
+
+**Images Used**
+&nbsp;
+I have used the images and all items description from another fabulous vintage website. Therefore I have no rights to them and if I was to develop this site for professional purposes, I would use my own material. 
+( [Jean Vintage](https://www.jeanvintage.co.uk/) ) 
+
+&nbsp;
+>## Disclaimer     
+    
+ _The content of this website is for educational purposes only._
