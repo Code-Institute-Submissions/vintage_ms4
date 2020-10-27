@@ -113,7 +113,7 @@ select {
     z-index: 99999;
 }
 
-/* ------------------------------- Profile */
+/* ------------------------------- Product */
 
 
 .cart-table-area .checkout_details_area form .add-product-row #div_id_category .nice-select {
@@ -128,6 +128,10 @@ select {
     z-index: 99999;
     width: 100%;
     padding: 0 0 0 2.4em;
+}
+
+.add-product-row {
+    margin: 10px;
 }
 
 
