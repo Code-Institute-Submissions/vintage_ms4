@@ -9,7 +9,7 @@
             <div class="row">
 
                 <!-- Edit an item -->
-                <div class=" col-12 col-xl-8 order-2 order-lg-1 p-5">
+                <div class=" col-12 col-lg-6">
                     <div class="checkout_details_area mt-50 clearfix">
                         <div class="cart-title">
                             <h2 class="text-center gold-text text-capitalize">Edit a Product</h2>
@@ -24,17 +24,16 @@
                                 {{ form | crispy }}
 
                             </div>
-
-                            <div class="cart-summary">
+ <div class="cart-summary">
                                 <div class="row payment-method submit-button pr-2">
-                                    <div class="col-12 col-md-6 px-2 cart-btn px-2 w-100 mb-4 mb-md-0">
+                                    <div class="col-12 col-md-6">
                                         <a href="{% url 'products' %}"
-                                           class="btn amado-btn profile-button w-100">Cancel</a>
+                                           class="btn amado-btn w-100">Cancel</a>
                                     </div>
 
                                     <button id="submit-button" type="submit"
-                                            class="col-12 col-md-6 px-2 cart-btn btn amado-btn w-100">
-                                        <span class=" amado-btn w-100">Update</span>
+                                            class="col-12 col-md-6 btn amado-btn w-100">
+                                        <span>Update</span>
                                     </button>
                                 </div>
                             </div>
