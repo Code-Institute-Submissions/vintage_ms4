@@ -1,6 +1,9 @@
 ># Full Stack Frameworks With Django 
+&nbsp;
+&nbsp;
 
 ## Milestone Project nr.4 -- *VINTAGE*
+
 
 &nbsp;
 - Repository
@@ -22,29 +25,31 @@ The site is created on a full stack Django framework, deployed on Heroku and use
 &nbsp;
 # Table of Contents
 
- 1. User Experience 
-	- User stories
-	- Designs 
- 2. Features
-	 - Exisitng 
-	 - Future
- 3. Technologies Used
- 4. Testing
-	- Devices
-	- Validation
-	- User Scenarios
- 5. Deployment 
- 6. Credits
+ 1. [User Experience](https://github.com/sneachda/vintage_ms4#user-experience)
+	- [User stories](https://github.com/sneachda/vintage_ms4#user-stories)
+	- [Designs](https://github.com/sneachda/vintage_ms4#design) 
+ 2. [Features](https://github.com/sneachda/vintage_ms4#features)
+	 - [Existing](https://github.com/sneachda/vintage_ms4#existing) 
+	 - [Future](https://github.com/sneachda/vintage_ms4#future)
+ 3. [Technologies Used](https://github.com/sneachda/vintage_ms4#technology-used)
+ 4. [Testing](https://github.com/sneachda/vintage_ms4#testing)
+	- [Devices](https://github.com/sneachda/vintage_ms4#devices)
+	- [Validation](https://github.com/sneachda/vintage_ms4#validation)
+	- [User Scenarios](https://github.com/sneachda/vintage_ms4#user-scenarios)
+ 5. [Deployment](https://github.com/sneachda/vintage_ms4#deployment)
+ 6. [Credits](https://github.com/sneachda/vintage_ms4#credits)
+
 
 #
-># USER EXPERIENCE
+>#[](https://github.com/sneachda/vintage_ms4#user-experience) USER EXPERIENCE
 &nbsp;
 Main goal of this website was to have a beautiful and easy mixture of vintage items in a modern setting. I wanted this site to be easy to navigate, to feel unique and have high quality images (there is a page that focuses mainly on images)
 &nbsp;
 The website is fully responsive, thanks to the bootstrap template I have used to develop the page - Amado. I have actually made a payment to use this template without featuring credits but I feel as this is a student project, I shouldn’t take credit for everything.
 &nbsp;
 #
-### A user stories
+### [](https://github.com/sneachda/vintage_ms4#user-stories) A user stories
+
 &nbsp;
 The websites allows for all kind of users to enjoy the features. You can be just a random unregistered visitor, potential buyer,  but you can also create an account to keep a track of your purchases and to store some of your information.
 
@@ -65,7 +70,7 @@ You can register or login if you already have an account. Once you are logged in
 Super user will be created via Django. He/she can access the profile via typing ‘/admin’ url into browser. They will be able to execute simple commands like editing or deleting an item from the site itself. In admin page admin can access all orders emails and all other details needed to maintain successful business.
 
 #
-### Design
+###[](https://github.com/sneachda/vintage_ms4#design) Design
 &nbsp;
 I have based my site on a template called Amado - live link https://colorlib.com/preview/theme/amado/  It came with own CSS (which also included fonts and some core images) and Javascript but I did ended up adding some small changes.
 
@@ -79,9 +84,9 @@ As this is a e-commerce website I felt images would play an important role. The 
 Temporary logo has been designed by. 
 &nbsp;
 #
-># Features 
+>#[](https://github.com/sneachda/vintage_ms4#features) Features 
 &nbsp;
-### Exisitng
+###[](https://github.com/sneachda/vintage_ms4#existing) Exisitng
 &nbsp;
 The layout of this multi-page website has been created with Bootstrap 4 grid and has 7 Django Apps. 
 
@@ -134,7 +139,7 @@ Similar to shopping bag, this page has also two main section. Financial cart det
  &nbsp;
 Following the flow of the design, this application also has two main sections. Default Billing information - where logged in user can store them and each time the new order is made, the info would be pulled through. And another section contains order history details (order number, date, items and full price). When clicked it loads original details of the order. 
 &nbsp;
-### Features still to implement 
+###[](https://github.com/sneachda/vintage_ms4#future) Features still to implement 
 &nbsp;
 With little time left to polish off this project there are certain things I would like to have, but couldn't sort it in time frame given:
 &nbsp;
@@ -149,7 +154,7 @@ I would probably be looking to add a bit more sorting options - especially if I 
 &nbsp;
 
 #
-># Technology Used
+>#[](https://github.com/sneachda/vintage_ms4#technology-used) Technology Used
 &nbsp;
 Here you can find the list of all the programmes used to create this website
 
@@ -200,16 +205,16 @@ Here you can find the list of all the programmes used to create this website
 
 &nbsp;
 #
-># Testing
+>#[](https://github.com/sneachda/vintage_ms4#testing) Testing
 &nbsp;     
-### Devices
+###[](https://github.com/sneachda/vintage_ms4#devices) Devices
 &nbsp;
 *Manual testing was carried out on mobile devices and desktop.*
 I also tested the site in Developer Tools. Especially useful for this was Chrome and Safari. 
 I used the full gamut of responsivity in Developer Tools, but I also tested on the specific resolutions.
 [**BrowserStack**](https://www.browserstack.com/)  - Any platform that I couldn't test in developer tools or on my own devices, I tested here.
 &nbsp;
-### Validation
+###[](https://github.com/sneachda/vintage_ms4#validation) Validation
 &nbsp;
 The code has been validated using:      
       &nbsp;  
@@ -221,7 +226,7 @@ The code has been validated using:
    validator. There was just complain about few lines being too long.    
     &nbsp;  
 
-### User Scenarios
+###[](https://github.com/sneachda/vintage_ms4#user-scenarios) User Scenarios
  &nbsp;
 As a visitor I have tested all the links to see if navigation is working and have went through the process of creating an order through successful completion. 
 1. Main Page
@@ -248,7 +253,7 @@ Overall the page is working fine. There are some outstanding bugs
 Upon load of site this error appears in the browser console: "DevTools failed to load SourceMap: Could not load content for [http://127.0.0.1:8000/static/css/bootstrap.min.css.map](http://127.0.0.1:8000/static/css/bootstrap.min.css.map): HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE".
       
 &nbsp;
-# [](https://github.com/sneachda//#deployment)
+# [](https://github.com/sneachda/vintage_ms4#deployment)
 ># Deployement 
 
   &nbsp;
@@ -405,7 +410,7 @@ Alternatively, your can deploy using Heroku CLI:
 The  **static files**  and  **media files**  (that will be uploaded by superuser - product/service images) are hosted in the  [AWS S3 Bucket](https://aws.amazon.com/). 
 
 #
-### [](https://github.com/sneachda/#credits)
+### [](https://github.com/sneachda/vintage_ms4#credits)
 ># Credits
 
 
