@@ -120,15 +120,17 @@ select {
 }
 
 /* ------------------------------- Product/Profile */
-
-form #div_id_category .nice-select {
+.add-product {
+    width: 100%;
+}
+.add-product form #div_id_category .nice-select {
     width: 100%;
     padding-top: 0;
 }
 
 
 
-form  #div_id_category .nice-select .list {
+.add-product form  #div_id_category .nice-select .list {
     overflow: scroll;
     max-height: 50em;
     z-index: 99999;
