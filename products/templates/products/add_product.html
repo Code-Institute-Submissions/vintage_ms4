@@ -12,16 +12,21 @@
                 <div class="col-12">
                     <div class="checkout_details_area mt-50 clearfix">
                         <div class="cart-title">
-                            <h2 class="text-center gold-text text-capitalize">Add a New Product</h2>
+                            <h2 class="text-center text-capitalize">Add a New Product</h2>
                         </div>
 
-                        <form action="{% url 'add_product' %}" method="POST" enctype="multipart/form-data">
+                        <div class="row add-product-row">
+                <div id="profile-update-form" class="col-12 col-lg-6">
+                    <form action="{% url 'add_product' %}" method="POST" enctype="multipart/form-data">
 
-                            {% csrf_token %}
+                        {% csrf_token %}
 
-                            <div class="row add-product-row">
+                        {{ form|crispy }}
 
-                                {{ form | crispy }}
+                        <button type="submit" class="btn amado-btn mt-4 mb-5 w-100">Update</button>
+                    </form>
+                </div>
+
 
                             </div>
 
