@@ -148,8 +148,9 @@ select {
 }
 
 @media (max-width: 767px) {
-    .allauth-form {
+    .allauth-form .add-product {
         margin: 0 2em 2em 1em;
     }
 }
+
 
