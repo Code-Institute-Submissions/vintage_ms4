@@ -4,6 +4,49 @@
 
 {% block content %}
 
+
+    <div class="cart-table-area section-padding-100">
+        <div class="container-fluid">
+            <div class="row m-10">
+                <div class="col-12 checkout_details_area mt-50 clearfix">
+                    <div class="cart-title">
+                        <h2 class="text-center">Add a New Product</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add New Item -->
+            <div class="row">
+                <div id="profile-update-form" class="col-12 col-lg-6">
+                    <h4 class="gold-text mb-4 text-center">Delivery Information</h4>
+                    <form action="{% url 'profile' %}" method="POST">
+
+                        {% csrf_token %}
+
+                        {{ form|crispy }}
+
+
+                        <div class="cart-summary">
+                                        <div class="row payment-method submit-button pr-2">
+                                            <div class="col-12 col-md-6">
+                                                <a href="{% url 'products' %}"
+                                                   class="btn amado-btn w-100">Cancel</a>
+                                            </div>
+
+                                            <button id="submit-button" type="submit"
+                                                    class="col-12 col-md-6">
+                                                <span class="btn amado-btn w-100">Save</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <div class="cart-table-area section-padding-100">
     <div class="container-fluid">
         <div class="row">
@@ -12,7 +55,7 @@
             <div class="col-12 col-xl-8 p-5">
                 <div class="checkout_details_area mt-50 clearfix">
                     <div class="cart-title">
-                        <h2 class="text-center text-capitalize">Add a New Product</h2>
+                        <h2 class="text-center text-capitalize"></h2>
                     </div>
 
                     <form action="{% url 'add_product' %}" method="POST" enctype="multipart/form-data">
