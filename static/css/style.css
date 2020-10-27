@@ -123,19 +123,19 @@ select {
 .add-product {
     width: 100%;
 }
-.add-product form #div_id_category .nice-select {
+.checkout_details_area .add-product form #div_id_category .nice-select {
     width: 100%;
     padding-top: 0;
 }
 
 
 
-.add-product form  #div_id_category .nice-select .list {
+.checkout_details_area .add-product form  #div_id_category .nice-select .list {
     overflow: scroll;
-    max-height: 50em;
+    max-height: 20em;
     z-index: 99999;
     width: 100%;
-    padding: 0 0 0 2.4em;
+    padding: 0 0 0 2em;
 }
 
 /* -------------------------------- Media Queries */
