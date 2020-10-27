@@ -121,14 +121,14 @@ select {
 
 /* ------------------------------- Product/Profile */
 
-
-#profile-update-form form #div_id_category .nice-select {
+form #div_id_category .nice-select {
     width: 100%;
     padding-top: 0;
 }
 
 
-#profile-update-form form  #div_id_category .nice-select .list {
+
+form  #div_id_category .nice-select .list {
     overflow: scroll;
     max-height: 50em;
     z-index: 99999;
