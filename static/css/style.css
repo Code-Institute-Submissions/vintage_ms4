@@ -122,13 +122,13 @@ select {
 /* ------------------------------- Product/Profile */
 
 
-.cart-table-area .checkout_details_area #profile-update-form form #div_id_category .nice-select {
+.cart-table-area .checkout_details_area .add-product-row form #div_id_category .nice-select {
     width: 100%;
     padding-top: 0;
 }
 
 
-.cart-table-area .checkout_details_area #profile-update-form form  #div_id_category .nice-select .list {
+.cart-table-area .checkout_details_area .add-product-row form  #div_id_category .nice-select .list {
     overflow: scroll;
     max-height: 50em;
     z-index: 99999;
