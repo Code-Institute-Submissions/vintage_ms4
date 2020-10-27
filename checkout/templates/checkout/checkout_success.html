@@ -22,7 +22,7 @@
 
                         <!-- Checkout Information Section -->
                         <div class="cart-title">
-                            <h2 class="gold-text text-capitalize">Thank you for your Order</h2>
+                            <h2 class="text-uppercase">Thank you for your Order</h2>
                         </div>
 
                         <p>The confirmation email will be sent to <strong> {{ order.email }}</strong></p>
@@ -33,13 +33,13 @@
                     <div class="checkout_details_area order-details-container mt-25 clearfix">
                         <div class="row text-center mb-3">
                             <div class="col">
-                                <span class="gold-text text-capitalize">Order Information:</span>
+                                <span class="gold-text text-uppercase">Order Information:</span>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <p class="mb-2 gold-text text-capitalize"><strong>Order Number</strong></p>
+                                <p class="mb-2 gold-text text-uppercase"><strong>Order Number</strong></p>
                             </div>
                             <div class="col-12 col-md-8 text-md-right">
                                 <p class="mb-2">{{ order.order_number }}</p>
@@ -48,14 +48,14 @@
 
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <p class="mb-2 gold-text text-capitalize"><strong>Order Date</strong></p>
+                                <p class="mb-2 gold-text text-uppercase"><strong>Order Date</strong></p>
                             </div>
                             <div class="col-12 col-md-8 text-md-right">
                                 <p class="mb-5">{{ order.date }}</p>
                             </div>
                         </div>
 
-                        <div class="row centered-text mb-3 gold-text text-capitalize">
+                        <div class="row centered-text mb-3 gold-text text-uppercase">
                             <div class="col">
                                 <span>Purchased:</span>
                             </div>
@@ -65,7 +65,7 @@
 
                             <div class="row">
                                 <div class="col-12 col-md-4">
-                                    <p class="small mb-3 gold-text text-capitalize">
+                                    <p class="mb-5 gold-text text-uppercase">
                                         <strong>{{ item.product.name }}</strong>
                                     </p>
                                 </div>
@@ -76,7 +76,7 @@
 
                         {% endfor %}
 
-                        <div class="row text-center mb-3 gold-text text-capitalize">
+                        <div class="row text-center mb-3 gold-text text-uppercase">
                             <div class="col">
                                 <span>Personal Details:</span>
                             </div>
@@ -84,7 +84,7 @@
 
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <p class="mb-2 gold-text text-capitalize"><strong>Full Name</strong></p>
+                                <p class="mb-2 gold-text text-uppercase"><strong>Full Name</strong></p>
                             </div>
                             <div class="col-12 col-md-8 text-md-right">
                                 <p class="mb-2">{{ order.full_name }}</p>
@@ -94,7 +94,7 @@
 
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <p class="mb-2 gold-text text-capitalize"><strong>Address 1</strong></p>
+                                <p class="mb-2 gold-text text-uppercase"><strong>Address 1</strong></p>
                             </div>
                             <div class="col-12 col-md-8 text-md-right">
                                 <p class="mb-2">{{ order.street_address1 }}</p>
@@ -105,7 +105,7 @@
 
                             <div class="row">
                                 <div class="col-12 col-md-4">
-                                    <p class="mb-2 gold-text text-capitalize"><strong>Address 2</strong></p>
+                                    <p class="mb-2 gold-text text-uppercase"><strong>Address 2</strong></p>
                                 </div>
                                 <div class="col-12 col-md-8 text-md-right">
                                     <p class="mb-2">{{ order.street_address2 }}</p>
@@ -116,7 +116,7 @@
 
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <p class="mb-2 gold-text text-capitalize"><strong>Town or City</strong></p>
+                                <p class="mb-2 gold-text text-uppercase"><strong>Town or City</strong></p>
                             </div>
                             <div class="col-12 col-md-8 text-md-right">
                                 <p class="mb-2">{{ order.town_or_city }}</p>
@@ -126,7 +126,7 @@
                         {% if order.postcode %}
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold gold-text text-capitalize">Postal Code</p>
+                            <p class="mb-0 font-weight-bold gold-text text-uppercase">Postal Code</p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="mb-0">{{ order.postcode }}</p>
@@ -136,7 +136,7 @@
 
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <p class="mb-2  gold-text text-capitalize"><strong>Country</strong></p>
+                                <p class="mb-2  gold-text text-uppercase"><strong>Country</strong></p>
                             </div>
                             <div class="col-12 col-md-8 text-md-right">
                                 <p class="mb-2">{{ order.country }}</p>
@@ -145,7 +145,7 @@
 
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <p class="mb-2 gold-text text-capitalize"><strong>Phone Number</strong></p>
+                                <p class="mb-2 gold-text text-uppercase"><strong>Phone Number</strong></p>
                             </div>
                             <div class="col-12 col-md-8 text-md-right">
                                 <p class="mb-5">{{ order.phone_number }}</p>
@@ -154,13 +154,13 @@
 
                         <div class="row text-center mb-3">
                             <div class="col">
-                                <span class="gold-text text-capitalize">Total Charged:</span>
+                                <span class="gold-text text-uppercase">Total Charged:</span>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <p class="mb-2 gold-text text-capitalize"><strong>Order Total</strong></p>
+                                <p class="mb-2 gold-text text-uppercase"><strong>Order Total</strong></p>
                             </div>
                             <div class="col-12 col-md-8 text-md-right">
                                 <p class="mb-2">{{ order.order_total }}</p>
