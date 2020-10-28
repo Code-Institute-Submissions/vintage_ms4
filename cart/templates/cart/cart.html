@@ -4,6 +4,7 @@
 
 {% block content %}
 
+    <!-- Shopping bag page -->
     <div class="cart-table-area section-padding-100">
         <div class="container-fluid">
             <div class="row">
@@ -15,21 +16,21 @@
                     <div class="cart-table clearfix">
                         <table class="table table-responsive text-center">
                             <tbody>
-                                <tr>
+                            <tr>
 
-                                    {% if cart_items %}
+                                {% if cart_items %}
 
-                                        <thead>
-                                            <tr>
-                                                <th>Image</th>
+                                    <thead>
+                                    <tr>
+                                        <th>Image</th>
 
-                                                <th>Name</th>
+                                        <th>Name</th>
 
-                                                <th>Quantity</th>
+                                        <th>Quantity</th>
 
-                                                <th>Value</th>
-                                            </tr>
-                                         </thead>
+                                        <th>Value</th>
+                                    </tr>
+                                    </thead>
 
                                     {% for item in cart_items %}
 
@@ -52,7 +53,6 @@
 
                                         </td>
 
-
                                         <!-- Item Name -->
                                         <td class="cart_product_desc">
                                             <h5>
@@ -68,11 +68,11 @@
                                             </form>
                                         </td>
 
-                                        <!-- Item Value -->
+                                        <!-- Item Price -->
                                         <td class="price mt-5">
                                             <span>£{{ item.product.price }}</span><br><br>
 
-                                            <!-- Delete Item Link  -->
+                                            <!-- Delete Item -->
                                             <button type="submit"
                                                     class="remove-item text-danger bg-transparent border-0 float-center add-cursor bigger-text"
                                                     id="remove_{{ item.item_id }}">Remove
@@ -86,7 +86,7 @@
                                 {% else %}
 
                                     <div class="cart-btn mt-50 text-center">
-                                        <p class="lead">Your cart is empty</p>
+                                        <h3>Your cart is empty</h3>
                                         <a href="{% url 'products' %}" class="btn amado-btn mt-30">Go Shopping</a>
                                     </div>
 

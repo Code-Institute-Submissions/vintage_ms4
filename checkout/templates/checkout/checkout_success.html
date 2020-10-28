@@ -1,5 +1,3 @@
-<!-- Not checked yet as I have an major issue with Stripe  -->
-
 {% extends "base.html" %}
 
 {% load static %}
@@ -12,11 +10,11 @@
 
 {% block content %}
 
+    <!-- Order confirmation page -->
     <div class="cart-table-area section-padding-100">
         <div class="container-fluid">
             <div class="row">
 
-                <!-- Checkout -->
                 <div class=" col-12 bg-color">
                     <div class="checkout_details_area mt-50 clearfix">
 
@@ -25,7 +23,8 @@
                             <h2 class="text-uppercase text-center">Thank you for your Order</h2>
                         </div>
 
-                        <p class="text-center">The confirmation email will be sent to <strong> {{ order.email }}</strong></p>
+                        <p class="text-center">The confirmation email will be sent to
+                            <strong> {{ order.email }}</strong></p>
                     </div>
                 </div>
 
@@ -124,15 +123,15 @@
                         </div>
 
                         {% if order.postcode %}
-                    <div class="row">
-                        <div class="col-12 col-md-4">
-                            <p class="mb-0 font-weight-bold gold-text text-uppercase">Postal Code</p>
-                        </div>
-                        <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0">{{ order.postcode }}</p>
-                        </div>
-                    </div>
-                    {% endif %}
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <p class="mb-0 font-weight-bold gold-text text-uppercase">Postal Code</p>
+                                </div>
+                                <div class="col-12 col-md-8 text-md-right">
+                                    <p class="mb-0">{{ order.postcode }}</p>
+                                </div>
+                            </div>
+                        {% endif %}
 
                         <div class="row">
                             <div class="col-12 col-md-4">

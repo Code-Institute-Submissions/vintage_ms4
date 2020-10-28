@@ -38,6 +38,7 @@
         </script>
 
         <!-- Bootstrap js -->
+        <!-- I have been having issues with file attaced with template for those reasons link is included here -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
                 integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
                 crossorigin="anonymous">
@@ -198,7 +199,7 @@
                 Search
             </a>
         </div>
-        <!-- Social Button -->
+        <!-- Social Media -->
         <div class="social-info d-flex justify-content-between">
             <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"
                                                                    aria-hidden="true"></i></a>
@@ -210,7 +211,7 @@
                                                               aria-hidden="true"></i></a>
         </div>
     </header>
-    <!-- Header Area End -->
+
 
     {% block content %}
 
@@ -267,22 +268,17 @@
                         <script>
                             document.write(new Date().getFullYear());
                         </script>
-                        | Site design by <a href="https://www.linkedin.com/in/alekssavela/"
-                                            target="_blank">Aleks Savela</a>
+                        | Site design by Vintage
 
                         | Template by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-
-                        | Re-distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a>
                     </p>
 
                 </div>
             </div>
 
-            <!-- Single Widget Area -->
+           <!-- Footer Menu -->
             <div class="col-12 col-lg-8">
                 <div class="single_widget_area">
-
-                    <!-- Footer Menu -->
                     <div class="footer_menu">
                         <nav class="navbar navbar-expand-lg justify-content-end">
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -324,6 +320,7 @@
 
 
     <!-- EmailJs -->
+    <!-- temporary fix for subscriptions -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
     <script type="text/javascript">
@@ -332,7 +329,6 @@
         })();
     </script>
     <script src="{% static 'js/emailjs.js' %}"></script>
-
 
 
     <!-- Toast js -->

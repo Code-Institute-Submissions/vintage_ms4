@@ -26,23 +26,18 @@
 
 
         <div class="widget catagory mb-50">
-            <!-- Categories -->
+            <!-- Designers -->
             <h6 class="widget-title mb-30">Designers</h6>
 
             <div class="catagories-menu">
                 <ul>
                     <li><a href="{% url 'products' %}">All Designers</a></li>
 
-
-
-
                     {% for designer in designers %}
-
 
                         <li><a href="{% url 'products' %}?designer={{ designer.name }}">{{ designer.name }}</a></li>
 
                     {% endfor %}
-
 
                 </ul>
             </div>
@@ -54,24 +49,16 @@
             <div class="row">
                 <div class="col-12">
                     <div class="product-topbar d-xl-flex align-items-end justify-content-between">
-
-                        <div class="total-products gold-text">
+                        <!-- Number of items -->
+                        <div class="total-products">
                             <p>
-
-
                                 <strong>{{ products|length }} </strong> Items
-
-
                             </p>
-
-
                         </div>
-
 
                         <!-- Sorting -->
                         <div class="product-sorting d-flex p-3">
                             <div class="sort-by-date d-flex align-items-center mr-15">
-
                                 <select id="sort-selector"
                                         class="custom-select{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>
@@ -90,8 +77,6 @@
                                             {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)
                                     </option>
                                 </select>
-
-
                             </div>
                         </div>
                     </div>
@@ -102,10 +87,10 @@
 
                 {% for product in products %}
 
-                    <!-- Single Antiquity Area -->
-                    <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                    <!-- Item Detailed -->
+                    <div class="col-6">
                         <div class="single-product-wrapper">
-                            <!-- Antiquity Image -->
+
                             <div class="product-img">
 
                                 {% if product.image1 %}
@@ -125,11 +110,8 @@
                                 {% endif %}
 
                             </div>
-
-
-                            <!-- Antiquity Description -->
                             <div class="product-description d-flex align-items-center justify-content-between">
-                                <!-- Antiquity Meta Data -->
+
                                 <div class="product-meta-data">
                                     <div class="line"></div>
 
@@ -141,7 +123,7 @@
                                 </div>
                                 <!-- Designer & Cart -->
                                 <div class="ratings-cart text-right">
-                                    <div class="ratings golden-text">
+                                    <div class="ratingst">
                                         <p>{{ product.designer }}</p>
                                     </div>
 
@@ -165,17 +147,13 @@
                                     </form>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
-
                 {% endfor %}
-
             </div>
         </div>
     </div>
-    <!-- All Antiquities Area End -->
+
 
 {% endblock %}
 

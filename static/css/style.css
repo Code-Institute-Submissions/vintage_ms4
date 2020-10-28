@@ -132,6 +132,7 @@ select {
 }
 
 /* ------------------------------- Product/Profile */
+
 .add-product {
     width: 100%;
 }
@@ -139,8 +140,6 @@ select {
     width: 100%;
     padding-top: 0;
 }
-
-
 
 .checkout_details_area .add-product form  #div_id_category .nice-select .list {
     overflow: scroll;
@@ -163,10 +162,4 @@ select {
     .allauth-form .add-product .cart-table-area {
         margin: 0 2em 2em 1em;
     }
-    .main-logo {
-        width: 50%;
-        height: 50%;
-    }
 }
-
-

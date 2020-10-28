@@ -4,15 +4,14 @@
 
 {% block content %}
 
-
-    <!-- Product Catagories -->
+    <!-- New Arrivals Page -->
     <div class="products-catagories-area clearfix">
         <div class="amado-pro-catagory clearfix">
 
             {% for arrival in arrivals %}
 
-                <!-- Single Catagory -->
-                <div class="single-products-catagory clearfix">
+                <!-- Single Product -->
+                <div class="single-products-catagory clearfix col-6">
                     <a href="{% url 'single_product' arrival.product_id %}">
                         <img src="{{ arrival.image1.url }}" alt="Image">
                         <!-- Hover Content -->

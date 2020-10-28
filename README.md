@@ -225,6 +225,15 @@ The code has been validated using:
  - app.py was tested through  [PEP8 Online](http://pep8online.com/)     
    validator. There was just complain about few lines being too long.    
     &nbsp;  
+    
+    
+After putting my html trhough valiatiors I often recived code errors due python ex:
+ 
+    Bad value {% url 'single_product' arrival.product_id %} for attribute href on element a: Illegal character in path segment: { is not allowed.
+
+CSS had zero errors. I did keep it short and relied a lot of templates included in Amado but also on bootstrap.
+
+After running my python files grough PEP8, it turnes out I received few '	line too long (85 > 79 characters)'
 
 ###[](https://github.com/sneachda/vintage_ms4#user-scenarios) User Scenarios
  &nbsp;
