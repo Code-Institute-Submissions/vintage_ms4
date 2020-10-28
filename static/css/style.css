@@ -4,6 +4,10 @@
     cursor: pointer;
 }
 
+.bg-color {
+    background-color: #f5f7fa;
+}
+
 /* ------------------------------- index page */
 .main-logo {
     top: 5vh;
@@ -26,6 +30,10 @@
     background-image: url('/static/images/core_img/bg-2.png');
 }
 
+.gold-finds {
+    text-shadow: 1px 1px 1px #fbb710;
+}
+
 /* ------------------------------- about page */
 
 .box-p {
@@ -38,9 +46,9 @@
 }
 
 .shadow1 {
-  -webkit-box-shadow: 3px 3px 5px 6px #6d6d6d;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    3px 3px 5px 6px #6d6d6d;  /* Firefox 3.5 - 3.6 */
-  box-shadow:         3px 3px 5px 6px #6d6d6d;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  -webkit-box-shadow: 3px 3px 5px 6px #f5f7fa;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #f5f7fa;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #f5f7fa;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 /* ------------------------------- Products Details */

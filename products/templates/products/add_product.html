@@ -8,7 +8,7 @@
     <div class="cart-table-area section-padding-100">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-lg-8">
+                <div class="col-12 col-lg-6">
                     <div class="checkout_details_area mt-50 clearfix">
 
                         <div class="cart-title">
@@ -24,17 +24,15 @@
 
                                     <div class="cart-summary">
                                         <div class="row payment-method submit-button pr-2">
-                                            <div class="col-12 col-md-6 mb-4 w-100">
+                                            <div class="col-12 col-md-6 px-2 cart-btn px-2 w-100 mb-4 mb-md-0">
                                                 <a href="{% url 'products' %}"
-                                                   class="btn amado-btn ">Cancel</a>
+                                                   class="btn amado-btn profile-button w-100">Cancel</a>
                                             </div>
-                                                <div class="col-12 col-md-6 btn amado-btn">
-                                            <button
-                                                    id="submit-button" type="submit">
-                                                <span>Save</span>
-                                            </button>
-                                                    </div>
 
+                                            <button id="submit-button" type="submit"
+                                                    class="col-12 col-md-6 px-2 cart-btn btn amado-btn w-100">
+                                                <span class=" amado-btn w-100">Save</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </form>

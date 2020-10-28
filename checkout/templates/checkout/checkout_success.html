@@ -12,7 +12,7 @@
 
 {% block content %}
 
-    <div class="cart-table-area section-padding-100">
+    <div class="cart-table-area section-padding-100 bg-color">
         <div class="container-fluid">
             <div class="row">
 
@@ -22,14 +22,14 @@
 
                         <!-- Checkout Information Section -->
                         <div class="cart-title">
-                            <h2 class="text-uppercase">Thank you for your Order</h2>
+                            <h2 class="text-uppercase text-center">Thank you for your Order</h2>
                         </div>
 
-                        <p>The confirmation email will be sent to <strong> {{ order.email }}</strong></p>
+                        <p class="text-center">The confirmation email will be sent to <strong> {{ order.email }}</strong></p>
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-9 col-xl-8">
+                <div class="col-12 col-lg-9">
                     <div class="checkout_details_area order-details-container mt-25 clearfix">
                         <div class="row text-center mb-3">
                             <div class="col">
