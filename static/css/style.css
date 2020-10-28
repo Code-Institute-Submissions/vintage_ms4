@@ -8,6 +8,10 @@
     background-color: #f5f7fa;
 }
 
+.cart-table-area {
+    padding: 15px;
+}
+
 /* ------------------------------- index page */
 .main-logo {
     top: 5vh;
@@ -158,6 +162,10 @@ select {
 @media (max-width: 767px) {
     .allauth-form .add-product .cart-table-area {
         margin: 0 2em 2em 1em;
+    }
+    .main-logo {
+        width: 50%;
+        height: 50%;
     }
 }
 
