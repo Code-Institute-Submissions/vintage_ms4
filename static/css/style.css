@@ -46,9 +46,9 @@
 }
 
 .shadow1 {
-  -webkit-box-shadow: 3px 3px 5px 6px #f5f7fa;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    3px 3px 5px 6px #f5f7fa;  /* Firefox 3.5 - 3.6 */
-  box-shadow:         3px 3px 5px 6px #f5f7fa;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  -webkit-box-shadow: 3px 3px 5px 6px #b5b5b5;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #b5b5b5;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #b5b5b5;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
 /* ------------------------------- Products Details */
@@ -156,7 +156,7 @@ select {
 }
 
 @media (max-width: 767px) {
-    .allauth-form .add-product {
+    .allauth-form .add-product .cart-table-area {
         margin: 0 2em 2em 1em;
     }
 }
