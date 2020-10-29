@@ -11,7 +11,7 @@
             {% for arrival in arrivals %}
 
                 <!-- Single Product -->
-                <div class="single-products-catagory clearfix col-6">
+                <div class="single-products-catagory clearfix">
                     <a href="{% url 'single_product' arrival.product_id %}">
                         <img src="{{ arrival.image1.url }}" alt="Image">
                         <!-- Hover Content -->
