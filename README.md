@@ -5,9 +5,9 @@
   
   
 &nbsp;  
-- Repository  
+- [Repository](https://github.com/sneachda/vintage-ms4)  
 &nbsp;  
-- Live website  
+- [Live website](https://vintage-milestone4.herokuapp.com/)  
 &nbsp;  
 - Wireframes  
   
