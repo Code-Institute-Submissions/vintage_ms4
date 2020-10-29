@@ -123,9 +123,6 @@ select {
 .checkout_details_area #payment-form #country-field {
     width: 100%;
     padding: 0 0 0 2.4em;
-}
-
-.checkout_details_area #payment-form #country-field {
     overflow: scroll;
     max-height: 20em;
     z-index: 99999;
@@ -136,13 +133,9 @@ select {
 .checkout_details_area .add-product form #div_id_category  {
     width: 100%;
     padding-top: 0;
-}
-
-.checkout_details_area .add-product form  #div_id_category {
     overflow: scroll;
     max-height: 20em;
     z-index: 99999;
-    width: 100%;
     padding: 0 0 0 2em;
 }
 
