@@ -90,7 +90,7 @@ def add_product(request):
             messages.success(request, 'You successfully added an item to site.')
             return redirect(reverse('single_product', args=[product.id]))
         else:
-            messages.error(request, 'Failed to an item. Please ensure the form is valid.')
+            messages.error(request, 'Please ensure the form is valid.')
     else:
         form = ProductForm()
 
@@ -117,7 +117,7 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated an item!')
             return redirect(reverse('single_product', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update an item. Please ensure that the form is valid.')
+            messages.error(request, 'Please ensure that the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -133,7 +133,7 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a antiquity from the store """
+    """ Delete a product from the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only admin can do that.')
         return redirect(reverse('home'))

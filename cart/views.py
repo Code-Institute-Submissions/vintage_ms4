@@ -11,7 +11,7 @@ def view_cart(request):
 
 
 def add_to_cart(request, item_id):
-    """Add the specified product to the shopping Cart"""
+    """Add the specified product to the shopping cart"""
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -19,7 +19,7 @@ def add_to_cart(request, item_id):
     cart = request.session.get('cart', {})
 
     cart[item_id] = quantity
-    messages.success(request, f'Added {product.name} to your bag')
+    messages.success(request, f'Added {product.name} to your cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -32,7 +32,7 @@ def remove_from_cart(request, item_id):
         product = get_object_or_404(Product, pk=item_id)
         bag = request.session.get('cart', {})
         bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your bag')
+        messages.success(request, f'Removed {product.name} from your cart')
 
         request.session['cart'] = bag
         return HttpResponse(status=200)
