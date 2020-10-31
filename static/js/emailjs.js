@@ -4,11 +4,12 @@ function sendMail(contactForm) {
     emailjs.send("gmail", "vintage", {
         "from_email": contactForm.email.value,
     }).then(
-        function (response) {
-            console.log("SUCCESS", response);
+        function() {
+             alert("Email sent successfully!");
+
 
         },
-         function (error) {
-            console.log("FAILED", error);
+         function(error) {
+            alert("FAILED!"+error);
         });
 }
