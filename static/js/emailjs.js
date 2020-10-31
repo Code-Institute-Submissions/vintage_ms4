@@ -9,20 +9,19 @@ submitButton.addEventListener('click', function(event){
 
     //prevent the reload of the page. here i prevent the event.
     event.preventDefault()
+    submitButton.value = 'Subscribing...';
 
     //Sending the email with the name and email
     emailjs.send("gmail", "vintage", {
-        "from_email": contactForm.email.value,
+        "from_email": email,
     })
         .then(
             function (response) {
                 console.log("SUCCESS", response);
-                alert("Email sent successfully!");
 
             },
             function (error) {
                 console.log("FAILED", error);
-                 alert("FAILED!"+error);
 
             }
 
