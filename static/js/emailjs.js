@@ -1,20 +1,33 @@
-const btn = document.getElementById('sub-button');
+// https://stackoverflow.com/questions/63265789/how-do-i-send-my-form-information-on-submit-to-my-email-with-emailjs
+//Getting the name and email from the DOM
+let email = document.getElementById('email').value
+//Getting the button from the DOM
+let submitButton = document.getElementById('sub-button')
 
-document.getElementById('subscribe-form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
+//Add event listener on click to the button - notice i added the event as argument to the function
+submitButton.addEventListener('click', function(event){
 
-   btn.value = 'Subscribing...';
+    //prevent the reload of the page. here i prevent the event.
+    event.preventDefault()
 
-   const serviceID = 'service_q2l54nc';
-   const templateID = 'template_8jquzfe';
+    //Sending the email with the name and email
+    emailjs.send("gmail", "vintage", {
+        "from_email": contactForm.email.value,
+    })
+        .then(
+            function (response) {
+                console.log("SUCCESS", response);
+                alert("Email sent successfully!");
 
-   emailjs.send(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Subscribe';
-      alert('Success!');
-    }, (err) => {
-      btn.value = 'Subscribe';
-      alert(JSON.stringify(err));
-    });
-});
+            },
+            function (error) {
+                console.log("FAILED", error);
+                 alert("FAILED!"+error);
+
+            }
+
+        );
+})
+
+
+

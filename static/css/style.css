@@ -120,12 +120,12 @@ select {
 
 /* ------------------------------- Checkout */
 
-.checkout_details_area #payment-form #country-field {
+.checkout_details_area #payment-form #country-field .nice-select {
     width: 100%;
     padding: 0 0 0 2.4em;
 }
 
-.checkout_details_area #payment-form #country-field {
+.checkout_details_area #payment-form #country-field .nice-select .list {
     overflow: scroll;
     max-height: 20em;
     z-index: 99999;
@@ -136,12 +136,12 @@ select {
 .add-product #id_default_country {
     width: 100%;
 }
-.checkout_details_area .add-product form #div_id_category  {
+.checkout_details_area .add-product form #div_id_category .nice-select {
     width: 100%;
     padding-top: 0;
 }
 
-.checkout_details_area .add-product form  #div_id_category {
+.checkout_details_area .add-product form  #div_id_category .nice-select .list {
     overflow: scroll;
     max-height: 20em;
     z-index: 99999;
@@ -163,6 +163,6 @@ select {
         margin: 0 2em 2em 1em;
     }
     .shadow2 {
-       text-shadow: 1px 1px 1px #f5f7fa;
+        text-shadow: 1px 1px 1px #f5f7fa;
     }
 }
