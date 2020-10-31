@@ -32,7 +32,7 @@ The site is created on a full stack Django framework, deployed on Heroku and use
     - [Devices](https://github.com/sneachda/vintage_ms4#-devices)    
     - [Validation](https://github.com/sneachda/vintage_ms4#-validation)    
     - [User Scenarios](https://github.com/sneachda/vintage_ms4#-user-scenarioss)    
- 5. [Deployment](https://github.com/sneachda/vintage_ms4#-deployment)    
+ 5. [Deployment](https://github.com/sneachda/vintage_ms4#-deployement)    
  6. [Credits](https://github.com/sneachda/vintage_ms4#-credits)    
     
     
@@ -79,7 +79,7 @@ Site administrator is created in Django.
 **Site Owner:**    
  Super user will be created via Django. He/she can access the profile via typing ‘/admin’ url into browser. They will be able to execute simple commands like editing or deleting an item from the site itself. In admin page, admin can access all orders, emails and all other details needed to maintain a successful business.    
     
-###[](https://github.com/sneachda/vintage_ms4#design) Design 
+### [](https://github.com/sneachda/vintage_ms4#-design) Design 
 &nbsp;    
 I have based my site on a template called [Amado](https://colorlib.com/preview/theme/amado/).  It came with own CSS (which also included fonts and some core images) and Javascript - but I did end up adding some small changes.    
     
