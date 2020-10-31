@@ -394,8 +394,9 @@ The template used to create the site.
 I learned so much while creating the above Code Institute mini-project.     
 As previous projects gave me enough knowledge on front end design, this one really let me explore what it means to be a Full Stack developer.     
     
-I do feel I had to lean heavily on the Boutique Ado's python code - to get such a complex site designed and up and running in a relatively short period of time. The whole Fullstack Frameworks & Django module was heavily investigated while creating this website. I had also looked around other students project for inspiration and ideas and how they married their own code with course material.    
-This was the first time during my studying period I felt a little bit overwhelmed and not entirely sure how to start. I do believe I have still a lot to learn if I am to proceed in this field and look for a career change.   
+I do feel I had to lean heavily on the Boutique Ado's python code - to get such a complex site up and running in a relatively short period of time. The whole Fullstack Frameworks & Django module was heavily investigated while creating this website. I had also looked around other students project for inspiration and ideas and how they married their own code with course material.  
+I need to admit I have found couple of students who have used template, which was very helpful while creating this site.   
+This was the first time during my studying period I felt a little bit overwhelmed and not entirely sure how to start. I feel like I have had a better grasping on the earlier modules and I do believe I have still a lot to learn if I am to proceed in this field and look for a career change.   
 &nbsp;    
     
 **Images Used** 
