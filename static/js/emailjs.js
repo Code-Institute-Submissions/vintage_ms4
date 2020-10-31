@@ -9,12 +9,12 @@ document.getElementById('subscribe-form')
 function sendMail(contactForm) {
     emailjs.send("gmail", "vintage", {
         "from_email": contactForm.email.value,
-    }).then(
-        function (response) {
-            console.log("SUCCESS", response);
-
-        },
-         function (error) {
-            console.log("FAILED", error);
-        });
+    }).then(function (response) {
+        if (response.status == 200 && response.text == 'OK')
+            alert('Your message has been sent Successfully..!!!');
+        else
+            alert('Sorry there was a problem. Please try again...!!!');
+    }, function () {
+        alert('Sorry there was a problem. Please try again...!!!');
+    });
 }
