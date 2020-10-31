@@ -7,7 +7,7 @@
 &nbsp;    
 - [Live website](https://vintage-milestone4.herokuapp.com/)    
 &nbsp;    
-- [Wireframes](https://github.com/sneachda/vintage_ms4/wireframes)    
+- [Wireframes](https://github.com/sneachda/vintage_ms4/tree/master/static/wireframes)    
     
 # &nbsp;    
 This is my 4th and final project for the Full-Stack Web Development Diploma with Code Institute.    
