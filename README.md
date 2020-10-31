@@ -21,19 +21,19 @@ The site is created on a full stack Django framework, deployed on Heroku and use
 # &nbsp;    
 # Table of Contents    
     
-1. [User Experience](https://github.com/sneachda/vintage_ms4#user-experience)    
-    - [User stories](https://github.com/sneachda/vintage_ms4#user-stories)    
-    - [Designs](https://github.com/sneachda/vintage_ms4#design)     
- 2. [Features](https://github.com/sneachda/vintage_ms4#features)    
-    - [Existing](https://github.com/sneachda/vintage_ms4#existing)     
-    - [Future](https://github.com/sneachda/vintage_ms4#future)    
- 3. [Technologies Used](https://github.com/sneachda/vintage_ms4#technology-used)    
- 4. [Testing](https://github.com/sneachda/vintage_ms4#testing)    
-    - [Devices](https://github.com/sneachda/vintage_ms4#devices)    
-    - [Validation](https://github.com/sneachda/vintage_ms4#validation)    
-    - [User Scenarios](https://github.com/sneachda/vintage_ms4#user-scenarios)    
- 5. [Deployment](https://github.com/sneachda/vintage_ms4#deployment)    
- 6. [Credits](https://github.com/sneachda/vintage_ms4#credits)    
+1. [User Experience](https://github.com/sneachda/vintage_ms4#--user-experience-)    
+    - [User stories](https://github.com/sneachda/vintage_ms4#-a-user-stories)    
+    - [Designs](https://github.com/sneachda/vintage_ms4#-design)     
+ 2. [Features](https://github.com/sneachda/vintage_ms4#-features)    
+    - [Existing](https://github.com/sneachda/vintage_ms4#-existing)     
+    - [Future](https://github.com/sneachda/vintage_ms4#-features-still-to-implement)    
+ 3. [Technologies Used](https://github.com/sneachda/vintage_ms4#-technology-used)    
+ 4. [Testing](https://github.com/sneachda/vintage_ms4#-testing)    
+    - [Devices](https://github.com/sneachda/vintage_ms4#-devices)    
+    - [Validation](https://github.com/sneachda/vintage_ms4#-validation)    
+    - [User Scenarios](https://github.com/sneachda/vintage_ms4#-user-scenarioss)    
+ 5. [Deployment](https://github.com/sneachda/vintage_ms4#-deployment)    
+ 6. [Credits](https://github.com/sneachda/vintage_ms4#-credits)    
     
     
  #  
@@ -79,7 +79,8 @@ Site administrator is created in Django.
 **Site Owner:**    
  Super user will be created via Django. He/she can access the profile via typing ‘/admin’ url into browser. They will be able to execute simple commands like editing or deleting an item from the site itself. In admin page, admin can access all orders, emails and all other details needed to maintain a successful business.    
     
-###[](https://github.com/sneachda/vintage_ms4#design) Design &nbsp;    
+###[](https://github.com/sneachda/vintage_ms4#design) Design 
+&nbsp;    
 I have based my site on a template called [Amado](https://colorlib.com/preview/theme/amado/).  It came with own CSS (which also included fonts and some core images) and Javascript - but I did end up adding some small changes.    
     
 As mentioned above I have had this template in my head for quite some time now. It has been amended slightly for the needs of this project and to fit the requirements but it has generally stayed very similar to the original as I feel all fitted well with my idea.  

@@ -122,7 +122,7 @@ select {
 
 .checkout_details_area #payment-form #country-field .nice-select {
     width: 100%;
-    padding: 0 0 0 2.4em;
+    padding: 0 0 0 2em;
 }
 
 .checkout_details_area #payment-form #country-field .nice-select .list {
@@ -133,9 +133,6 @@ select {
 
 /* ------------------------------- Product/Profile */
 
-.add-product #id_default_country {
-    width: 100%;
-}
 .checkout_details_area .add-product form #div_id_category .nice-select {
     width: 100%;
     padding-top: 0;
@@ -144,9 +141,21 @@ select {
 .checkout_details_area .add-product form  #div_id_category .nice-select .list {
     overflow: scroll;
     max-height: 20em;
+    color: #b5b5b5;
     z-index: 99999;
     width: 100%;
     padding: 0 0 0 2em;
+}
+
+.cart-table-area .row #profile-update-form #div_id_default_country .nice-select {
+    width: 100%;
+    padding: 0 0 0 1em;
+}
+
+.cart-table-area .row #profile-update-form #div_id_default_country .nice-select .list {
+    overflow: scroll;
+    max-height: 20em;
+    z-index: 99999;
 }
 
 /* -------------------------------- Media Queries */

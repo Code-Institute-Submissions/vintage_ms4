@@ -4,14 +4,14 @@ document.getElementById('subscribe-form')
  .addEventListener('submit', function(event) {
      event.preventDefault();
 
-     btn.value = 'Subscribed';
+     btn.value = 'Subscribing...';
  });
 function sendMail(contactForm) {
     emailjs.send("gmail", "vintage", {
         "from_email": contactForm.email.value,
     }).then(function (response) {
         if (response.status == 200 && response.text == 'OK')
-            alert('Your message has been sent Successfully..!!!');
+            alert('You have now subscribed to Vintage!');
         else
             alert('Sorry there was a problem. Please try again...!!!');
     }, function () {
